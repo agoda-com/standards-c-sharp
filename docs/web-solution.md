@@ -1,10 +1,14 @@
 # Web solution structure
 
-This describes the standard abstract solution structure preferred by Agoda for a web-based project. Each box represents one project in the solution. Use common sense and adapt to your specific use-case. 
+This describes the standard abstract solution structure preferred by Agoda for a web-based project. Each box represents one project in the solution. Use common sense and adapt to your specific use-case.
+
+Prefer to organize code primarily by functional area, rather than architectural layer (see examples below).
 
 ![Web solution structure](https://drive.google.com/uc?id=1XPy--wohqCpiioi2oOz9IaerMoHlWA_h)
 
 ## Presentation project(s)
+
+![Example folder structure](https://drive.google.com/uc?id=1HbIuJvfOOwTDzsindOHU9Sst9dr7Riw-)
 
 ### View models / DTOs
 
@@ -31,6 +35,8 @@ This describes the standard abstract solution structure preferred by Agoda for a
 ## Service project
 
 Should know nothing about the web / HTTP.
+
+![Example folder structure](https://drive.google.com/uc?id=17Z1K6g5RA5eHzoT7QjiIxWfjLlzNnpW4)
 
 ### Models
 
