@@ -64,6 +64,12 @@ Should know nothing about the web / HTTP.
 
 ## Repository project
 
+### Folder structure
+
+![Example folder structure](https://drive.google.com/uc?id=1hDcozXoQIap_-Yxgoykoj8d2sajmyGUu)
+
+### Repos
+
 - Repo implementations.
 - Can be combined with the Service project for convenience, or broken into a separate project to enforce correct chain of dependencies.
 - May not be needed at all if you are only consuming backend services through client libraries.
