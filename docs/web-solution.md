@@ -36,7 +36,7 @@ Prefer to organize code primarily by functional area, rather than architectural 
 
 ## Service project
 
-Should know nothing about the web / HTTP.
+Should be hosting environment agnostic - ie. should not depend on any HTTP abstractions.
 
 ### Folder structure
 
