@@ -40,7 +40,7 @@ Should know nothing about the web / HTTP.
 
 - Implements business logic and builds models.
 - May aggregate data from other services if required.
-- Should take at least one non-pure dependency, else should be converted to a helper. Consider if any methods that can be static should be moved to a helper.
+- Should take at least one non-pure dependency, else should be converted to a helper. If any methods can be made static, consider moving them to a helper.
 - Consider skipping the service entirely if it is only a thin wrapper around a repo or client library.
 
 ### Business helpers
