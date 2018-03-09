@@ -15,7 +15,7 @@ Prefer to organize code primarily by functional area, rather than architectural 
 ### View models / DTOs
 
 - Should be dumb and free of business logic, but if trivial may contain:
-    - Purely presentational logic (eg. formatting). Refactor into a presentational service as necessary.
+    - Purely presentational logic (eg. formatting). Refactor into a presentational helper as necessary.
     - Mapping logic, eg `MyViewModel.From(MyModel model)`. Refactor into a separate model builder as necessary.
 
 ### Views
@@ -50,8 +50,8 @@ Should be hosting environment agnostic - ie. should not depend on any HTTP abstr
 
 - Implements business logic and builds models.
 - May aggregate data from other services if required.
-- Should take at least one non-pure dependency, else should be converted to a helper. If any methods can be made static, consider moving them to a helper.
-- Consider skipping the service entirely if it is only a thin wrapper around a repo or client library.
+- Should take at least one non-pure dependency, else should be converted to a helper. If any methods can be made static, make them so, and consider moving them to a helper.
+- Consider skipping the service entirely if it is only a thin wrapper around a repo or client library (eg. PAPI Client).
 
 ### Business helpers
 
@@ -72,4 +72,4 @@ Should be hosting environment agnostic - ie. should not depend on any HTTP abstr
 
 - Repo implementations.
 - Can be combined with the Service project for convenience, or broken into a separate project to enforce correct chain of dependencies.
-- May not be needed at all if you are only consuming backend services through client libraries.
+- May not be needed at all if you are only consuming backend services through client libraries (eg. PAPI Client).
