@@ -14,9 +14,9 @@ Prefer to organize code primarily by functional area, rather than architectural 
 
 ### View models / DTOs
 
-- Should be dumb and free of business logic, but if trivial may contain:
-    - Purely presentational logic (eg. formatting). Refactor into a presentational helper as necessary.
-    - Mapping logic, eg `MyViewModel.From(MyModel model)`. Refactor into a separate model builder as necessary.
+- Should be dumb and free of business logic, but may contain:
+    - Trivial presentational logic (eg. formatting). Refactor into a presentational helper when necessary.
+    - Trivial mapping logic, eg `MyViewModel.From(MyModel model)`. Refactor into a separate model builder when necessary.
 
 ### Views
 
