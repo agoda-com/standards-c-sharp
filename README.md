@@ -2,6 +2,8 @@
 
 We'll use this repo to discuss and record our decisions for improving and standardizing our code at Agoda.
 
+What do we have so far? See the [docs](./tree/master/docs).
+
 Something bugging you? Create an issue!
 
 Want to contribute? Send a pull request!

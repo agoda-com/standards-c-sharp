@@ -1,5 +1,7 @@
 These are the C# coding standards and practices for new (non-legacy) code. This is a living document. Please discuss on #code-quality and send a pull request if you would like to contribute.
 
+This document is currently a brain dump and will be broken up into focussed issues as we progress.
+
 ## Philosophy: KISS
 
 _Keep It Simple, Stupid_ - Some guy
