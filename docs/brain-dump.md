@@ -68,7 +68,7 @@ Unnecessary interfaces pollute the codebase and make it more difficult to unders
 - Declare a component's dependencies explicitly in its constructor. Don't use property injection. It's super lame.
 - Each injectable component should expose only a [single public constructor](https://www.cuttingedge.it/blogs/steven/pivot/entry.php?id=97). Multiple constructors lead to a fragile design and present maintainability issues.
 - Register dependencies with the container by decorating the class with a suitable attribute. (Done in YCS but not yet implemented in Dictator I believe).
-- **For the love of god do not use `ServiceLocator.Current`.** Inject your dependency through the constructor like a normal person.
+- **For the love of god do not use `ServiceLocator.Current`.** Inject your dependency through the constructor.
 
 ### Example
 
