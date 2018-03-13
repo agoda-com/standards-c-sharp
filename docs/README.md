@@ -1,4 +1,4 @@
 # Index
 
-- [Initial brain dump for later discussion](brain-dump.md)
+- [Initial brain dump for later discussions](brain-dump.md)
 - [Web solution structure](web-solution-structure.md)
