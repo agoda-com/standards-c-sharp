@@ -44,4 +44,4 @@ If your function is pure (ie. same output for the same input, and no side effect
 
 ## Nomenclature
 
-Reserve the suffix `Service` for a class with non-pure methods that requires dependencies. If a class consists only of pure methods, then name it something else, eg. `FooHelper`, `FooUtils` etc.
+Reserve the suffix `Service` for a class with non-pure methods that requires dependencies. If a class consists only of pure methods, then make it static and name it something else, eg. `FooHelper`, `FooUtils` etc.
