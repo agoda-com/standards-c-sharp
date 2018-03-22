@@ -18,6 +18,8 @@ Prefer to organize code primarily by functional area, rather than architectural 
 - Should be dumb and free of business logic, but may contain:
     - Trivial presentational logic (eg. formatting). Refactor into a presentational helper when necessary.
     - Trivial mapping logic, eg `MyViewModel.From(MyModel model)`. Refactor into a separate model builder when necessary.
+- View models don't need to be defined if they merely duplicate a model's properties, i.e. avoid 1-to-1 matching classes
+- View models should include CMS contents required by a view, not models
 
 ### Views
 
@@ -34,6 +36,7 @@ Prefer to organize code primarily by functional area, rather than architectural 
 ### Presentational helpers
 
 - Static classes with pure methods that implement more complex presentational logic.
+- Helpers are "presentation services", i.e. classes responsible of composing one or more models into view models
 
 ## Service project
 
@@ -44,6 +47,7 @@ Should be hosting environment agnostic - ie. should not depend on any HTTP abstr
 (TBD) - this shouldn't be necessary if we keep services and repositories in the same project
 
 (picture below is obsolete)
+
 ![Example folder structure](https://drive.google.com/uc?id=17Z1K6g5RA5eHzoT7QjiIxWfjLlzNnpW4)
 
 ### Models
