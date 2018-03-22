@@ -22,7 +22,7 @@ public abstract class ServiceBase
 
 ## Register dependencies by convention using attributes
 
-To register your class with the container, decorate it with one of the Lifestyle attributes:
+Rather than having some monstrous file where all our dependencies are registered explicitly, we will create Lifestyle attributes, with which your class can be decorated to have it automatically registered to the container.
 
 ```c#
 public abstract class LifestyleAttribute : Attribute
