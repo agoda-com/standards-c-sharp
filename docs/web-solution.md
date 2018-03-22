@@ -12,7 +12,50 @@ Prefer to organize code primarily by functional area, rather than architectural 
 
 ### Folder structure
 
-![Example folder structure](https://drive.google.com/uc?id=1HbIuJvfOOwTDzsindOHU9Sst9dr7Riw-)
+- Keep top-level folders organized by high level feature, not by what a class is (e.g. repos vs models)
+- Avoid organizing and naming after external dependencies
+- Avoid organizing around pages
+- Avoid unnecessary namespace span (e.g. Repositories vs Interfaces)
+
+For example:
+
+```
++- (Project root)
+  +- Geography
+    +- Models
+      City
+      Country
+      Landmark
+    +- Repositories
+      GeoRepository
+      IGeoRepository
+  +- Pricing
+    +- Models
+      RoomPrice
+    +- Repositories
+      PriceRepository
+      IPriceRepository
+  +- Users
+    +- Models
+      BaseUser
+      Traveller
+      Host
+    +- Repositories
+      UserRepository
+      IUserRepository
+  +- Localization
+    PriceFormatter
+    DateFormatter
+    +- Models
+      Currency
+      Language
+    +- Repository
+      CurrencyRepository
+      ICurrencyRepository
+      LanguageRepository
+      ILanguageRepository
+```
+
 
 ### View models / DTOs
 
