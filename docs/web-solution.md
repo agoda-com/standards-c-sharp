@@ -10,9 +10,6 @@ Prefer to organize code primarily by functional area, rather than architectural 
 
 ## Presentation project(s)
 
-### Folder structure
-
-
 ### View models / DTOs
 
 - Should be dumb and free of business logic, but may contain:
@@ -41,14 +38,6 @@ Prefer to organize code primarily by functional area, rather than architectural 
 ## Service project
 
 Should be hosting environment agnostic - ie. should not depend on any HTTP abstractions.
-
-### Folder structure
-
-(TBD) - this shouldn't be necessary if we keep services and repositories in the same project
-
-(picture below is obsolete)
-
-![Example folder structure](https://drive.google.com/uc?id=17Z1K6g5RA5eHzoT7QjiIxWfjLlzNnpW4)
 
 ### Models
 
@@ -84,7 +73,13 @@ Models are meant to be reusable, their properties should not be tightly coupled 
 - Must not contain any CMS values (with the sole exception of CMS that contains formatting and/or actual data); CMS should stay confined in view models
 - Favor inheritance when possible, i.e. avoid duplicated models and/or duplicated properties across models
 
-### Folder structure
+### Repos
+
+- Repo implementations.
+- Can be combined with the Service project for convenience, or broken into a separate project to enforce correct chain of dependencies.
+- May not be needed at all if you are only consuming backend services through client libraries (eg. PAPI Client).
+
+## Folder structure
 
 - Keep top-level folders organized by high level feature, not by what a class is (e.g. repos vs models)
 - Avoid organizing and naming after external dependencies
@@ -129,9 +124,3 @@ For example:
       LanguageRepository
       ILanguageRepository
 ```
-
-### Repos
-
-- Repo implementations.
-- Can be combined with the Service project for convenience, or broken into a separate project to enforce correct chain of dependencies.
-- May not be needed at all if you are only consuming backend services through client libraries (eg. PAPI Client).
