@@ -51,7 +51,7 @@
   - It's not easy to navigate to the test files.
   - The structure of the test assembly must be kept in sync with that of the implementation.
 - Client side projects (eg. JS) universally put their tests next to the implementations. This mitigates the problems above.
-- So, do not create a separate unit test project. Place the test code beside the classes they are testing. The build process will strip these out from the production build.
+- So, do not create a separate unit test project. Place the test code beside the classes they are testing. The build process will strip these out from the production build (not yet implemented - POC in progress).
 
 ## Mocking
 
