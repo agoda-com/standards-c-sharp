@@ -8,7 +8,7 @@
 ## Naming conventions
 
 - Avoid test method names like `MyClassTest()`. What is it actually testing? If it breaks, how do we know what it should be doing?
-- Standardize naming conventions
+- Standardized naming conventions:
   - Test class names: `<Classname>Tests` (we pretty much do this already)
   - Test names: `<MethodUnderTest>_<OptionalPreConditions>_<PostCondition>()`
     - eg. `ToggleHarzardLights_WhenAlreadyBlinking_StopsBlinking()`
