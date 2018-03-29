@@ -42,7 +42,7 @@
 - Only ever test the public interface. If a class is difficult to test through its public interface, then this may be a code smell that the class is poorly designed. If you are having trouble using your class, think about your poor consumers.
 - Avoid testing internals as, again, this couples the tests to the implementation, meaning they are more likely to break during refactoring.
   - **Never** make a method public just so it can be tested. Each time you do this **multiple** kittens die.
-  - Do not use the `[InternalsVisibleToAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=netframework-4.7.1)`. Won't someone think of the kittens?
+  - Do not use the [`InternalsVisibleToAttribute`](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=netframework-4.7.1)` for the aforementioned reasons. Won't someone think of the kittens?
 
 ## Test file placement
 
