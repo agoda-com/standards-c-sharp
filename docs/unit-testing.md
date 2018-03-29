@@ -61,3 +61,4 @@
 
 - Consider using https://github.com/AutoFixture/AutoFixture to avoid having to think up and create random test data.
   - [Example](https://github.agodadev.io/agoda-front-end/agoda-com-dictator/blob/master/Src/Agoda.Website/Agoda.Website.UnitTest/NewSite/Mapper/NHA/SingleRoom/SingleRoomFeatureViewModelMapperTest.cs#L13)
+- Further reading: https://github.com/jpreese/CSharpUnitTestingBestPractices
