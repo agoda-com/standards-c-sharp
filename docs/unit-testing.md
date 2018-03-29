@@ -13,7 +13,7 @@
   - Test names: `<MethodUnderTest>_<OptionalPreConditions>_<PostCondition>()`
     - eg. `ToggleHarzardLights_WhenAlreadyBlinking_StopsBlinking()`
 
-## Tests as a spec
+## Tests as the spec
 
 - Think of the tests as the _specification_ for your application.
 - We should be able to tell exactly how a method should behave just by looking at the names (and perhaps the test cases) of its tests. No need to even look at the code, either test or implementation.
