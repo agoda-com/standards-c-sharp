@@ -40,7 +40,7 @@
   - **White box**: our test depends upon the implementation, for instance verifying that a certain method was called. Sometimes this is unavoidable, but use sparingly and only when strictly necessary.
       - Classes such as directors or orchestrators, which serve only to call other methods, might be good candidates for white box testing.
       - But such classes are much more difficult to refactor as their tests are likely to break if their internals are changed.
-- Only ever test the public interface. If a class is difficult to test through its public interface, then this may be a code smell that the class is poorly designed. If you are having trouble using your class, think about your poor consumers.
+- Only ever test the public interface. If a class is difficult to test through its public interface, then this may be a code smell that the class is poorly designed. If _you_ as the author are having trouble using your class, think about your poor consumers.
 - Avoid testing internals as, again, this couples the tests to the implementation, meaning they are more likely to break during refactoring.
   - **Never** make a method public just so it can be tested. Each time you do this **multiple** kittens die.
   - Do not use the [`InternalsVisibleToAttribute`](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=netframework-4.7.1) for the aforementioned reasons. Won't someone think of the kittens?
