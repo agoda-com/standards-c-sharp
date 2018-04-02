@@ -12,7 +12,7 @@
 - [Tests should be short and simple](tests-should-be-short-and-simple.md)
 
 
-## More 
+## And then we continue like that ^^^^
 - Overuse of `[TestCase]` can make it difficult to see what is actually being tested, especially when there are many parameters. This often results in a combinatorial explosion as new parameters are added. Test cases are best suited to simple scenarios and boundary conditions. [Good example](https://github.agodadev.io/agoda-front-end/agoda-com-dictator/blob/master/Src/Agoda.Website/Agoda.Website.UnitTest/Builder/PillViewModelBuilderTests.cs#L80)
 - Be wary of refactoring tests as this can make them difficult to follow (eg. a `BaseTest`). Sometimes copy+paste is OK. A simple, straight-through test is easier to understand fix if a test breaks. We don't want to waste time trying to understand a bunch of testing infrastructure code first.
 - Keep your functions pure if possible. They are easier to test and require less setup.
