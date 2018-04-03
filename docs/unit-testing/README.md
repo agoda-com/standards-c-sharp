@@ -10,12 +10,11 @@
 - [Test method names should clearly indicate what they are testing](test-method-names-should-clearly-indicate-what-they-are-testing.md).
 - [Tests should be written as if they are a specification](tests-should-be-written-as-if-they-are-a-specification.md).
 - [Tests should be short and simple](tests-should-be-short-and-simple.md)
+- [Don't obfuscate tests with complex test cases](dont-obfuscate-tests-with-complex-test-cases.md)
+- [Use test cases to test boundary conditions](use-test-cases-to-test-boundary-conditions.md)
+- [Keep functions pure if possible](keep-functions-pure-if-possible.md)
+- [Be wary of refactoring tests](be-wary-of-refactoring-tests.md)
 
-
-## And then we continue like that ^^^^
-- Overuse of `[TestCase]` can make it difficult to see what is actually being tested, especially when there are many parameters. This often results in a combinatorial explosion as new parameters are added. Test cases are best suited to simple scenarios and boundary conditions. [Good example](https://github.agodadev.io/agoda-front-end/agoda-com-dictator/blob/master/Src/Agoda.Website/Agoda.Website.UnitTest/Builder/PillViewModelBuilderTests.cs#L80)
-- Be wary of refactoring tests as this can make them difficult to follow (eg. a `BaseTest`). Sometimes copy+paste is OK. A simple, straight-through test is easier to understand fix if a test breaks. We don't want to waste time trying to understand a bunch of testing infrastructure code first.
-- Keep your functions pure if possible. They are easier to test and require less setup.
 
 ## Make refactoring easier
 

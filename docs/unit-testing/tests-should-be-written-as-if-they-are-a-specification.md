@@ -17,7 +17,7 @@ public void CalculatorWorks()
 }
 ```
 
-### Compliant code
+### Compliant solution
 
 ```c#
 [Test]

@@ -67,7 +67,7 @@ public class PillViewModelBuilderTests
 }
 ```
 
-### Compliant code
+### Compliant solution
 
 ```c#
 [TestFixture()]
