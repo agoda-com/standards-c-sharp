@@ -29,6 +29,7 @@ Prefer to organize code primarily by functional area, rather than architectural 
 - Should be free of business logic.
 - Should accept and return View models / DTOs when communicating with the outside world.
 - Should accept and return Models when communicating internally.
+- Cannot be extended
 
 ### Presentational helpers
 
@@ -43,22 +44,25 @@ Should be hosting environment agnostic - ie. should not depend on any HTTP abstr
 
 - An abstract representation of part of our domain.
 
-### Business services
+### services
 
 - Implements business logic and builds models.
-- May aggregate data from other services if required.
+- May aggregate data from other services if required. ??
 - Should take at least one non-pure dependency, else should be converted to a helper. If any methods can be made static, make them so, and consider moving them to a helper.
 - Consider skipping the service entirely if it is only a thin wrapper around a repo or client library (eg. PAPI Client).
+- Should do some form of IO, exception being viewmodel builders
 
-### Business helpers
+### helpers
 
-- Static classes with pure methods that implement business logic.
+- Static classes with pure methods
 - Prefer helpers over services for simplicity and to reduce constructor dependencies.
 
 ### Repo interfaces
 
 - Should be defined here to make it easy to swap out repository implementations.
-
+ 
+ NOTE: Same project
+ 
 ## Repository project
 
 ### Models
@@ -66,12 +70,12 @@ Should be hosting environment agnostic - ie. should not depend on any HTTP abstr
 Models are meant to be reusable, their properties should not be tightly coupled with presentational needs and/or experimentation.
 
 - Should consist purely of data properties
-- Should no implement any business logic internally
-- Prefer structs over classes
+- Should not implement any business logic internally
 - Should never contain properties named after experiments; properties should always be meaningful regardless of the experiments that set their values
 - Self-computable properties should never have a setter; their get method should implement the computation logic
 - Must not contain any CMS values (with the sole exception of CMS that contains formatting and/or actual data); CMS should stay confined in view models
 - Favor inheritance when possible, i.e. avoid duplicated models and/or duplicated properties across models
+    - NOTE: need to talk about use case for this
 
 ### Repos
 
