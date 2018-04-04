@@ -1,4 +1,4 @@
-## Use `[TestCase]` app appropriately
+## Use `[TestCase]` appropriately
 
 Overuse of `[TestCase]` can make it difficult to see what is actually being tested, especially when there are many parameters. This can results in a combinatorial explosion of cases as new parameters are added.
 
