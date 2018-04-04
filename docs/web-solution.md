@@ -6,7 +6,7 @@ This describes the standard abstract solution structure preferred by Agoda for a
 
 Prefer to organize code primarily by functional area, rather than architectural layer (see examples below).
 
-![Web solution structure](https://drive.google.com/uc?id=1XPy--wohqCpiioi2oOz9IaerMoHlWA_h)
+![Web solution structure](https://drive.google.com/uc?id=1ZobfNezweeamEs_FXFtp2e3xi8hvyb-Y)
 
 ## Presentation project(s)
 
