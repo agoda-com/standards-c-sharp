@@ -4,8 +4,11 @@
 - Keep them simple and focused, testing one requirement a time - a short story, not an epic novel.
 - These kind of tests are much easier to fix if they break.
 - If there are very many asserts then that may be an indication you are testing too much in one go.
+- This relates to [Tests should be written as if they are a specification](tests-should-be-written-as-if-they-are-a-specification.md).
 
 ### Noncompliant code
+
+Here, all the behavior of the class is tested in a single method.
 
 ```c#
 [TestFixture()]
@@ -68,6 +71,8 @@ public class PillViewModelBuilderTests
 ```
 
 ### Compliant solution
+
+Now we are testing one requirement at a time.
 
 ```c#
 [TestFixture()]
