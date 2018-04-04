@@ -11,9 +11,9 @@
    - a factory function that constructs your system under test but takes 11 parameters to cover all possible cases
    - a seperate function that performs the Asserts into which your result is passed, that also takes a bunch of parameters
    
- ...then great! The test code might be completely DRY, but unless you wrote it all, you are going to need to spend a bunch of time having to understand all this complexity before you can even work out what's gone wrong.
+ ...then you might have made your test code completely DRY, but unless you wrote it all yourself, you are going to have a hard time understanding it.
  
- - Don't be afraid to copy and paste when writing tests if you can keep them reasonably short. Tests should (hopefully) rarely change, so the repeated code shouldn't present much of maintenance headache in the long term.
+ - Don't be afraid to copy and paste when writing tests if you can keep them reasonably short. Tests should (hopefully) rarely change, so the code shouldn't present much of maintenance problem in the long term.
  - Aim for simplicity and readability over DRY and abstracted.
  
  Imagine testing this stupid class that doesn't really do anything interesting.
@@ -56,7 +56,8 @@
  
  ### Noncompliant code
  
- Here the test code is almost completely dry, but very difficult to follow.
+ Here the test code is almost completely dry, but quite difficult to read or reason about, especially the magic in the base class, and the `CheckResult` function.
+ 
  ```c#
 [TestFixture]
 public class BaseTest

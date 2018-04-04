@@ -1,6 +1,6 @@
-## Use `[TestCase]` to test for boundary conditions
+## Use test cases to test for boundary conditions
 
-- `[TestCase]` is great for testing boundary conditions.
+`[TestCase]` is great for testing boundary conditions.
 
 ### Compliant solution
 
