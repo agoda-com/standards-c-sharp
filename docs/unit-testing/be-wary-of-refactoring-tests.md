@@ -78,7 +78,7 @@ public class BaseTest
 [TestFixture]
 public class MyTestClassTest : BaseTest
 {
-    private const string Exp = "EXP-123";
+    private const string ExpId = "EXP-123";
     private MyTestClass _myClass;
 
     [SetUp]
@@ -90,7 +90,7 @@ public class MyTestClassTest : BaseTest
     [Test]
     public void ABC_WhenExperimentIsA_AreNotSet()
     {
-        SetVariant(Exp, 'A');
+        SetVariant(ExpId, 'A');
         _myClass.ABC("a", "b", "c");
         CheckResult(_myClass, null, null, null, null, null, null);
     }
@@ -98,7 +98,7 @@ public class MyTestClassTest : BaseTest
     [Test]
     public void ABC_WhenExperimentIsB_AreSet()
     {
-        SetVariant(Exp, 'B');
+        SetVariant(ExpId, 'B');
         _myClass.ABC("a", "b", "c");
         CheckResult(_myClass, "a", "b", "c", null, null, null);
     }
@@ -106,7 +106,7 @@ public class MyTestClassTest : BaseTest
     [Test]
     public void DEFF_WhenExperimentIsA_Fs()
     {
-        SetVariant(Exp, 'A');
+        SetVariant(ExpId, 'A');
         _myClass.DEF("d", "e", "f");
         CheckResult(_myClass, null, null, null, "d", "e", "f");
     }
@@ -114,7 +114,7 @@ public class MyTestClassTest : BaseTest
     [Test]
     public void DEFF_WhenExperimentIsB_Wtfs()
     {
-        SetVariant(Exp, 'B');
+        SetVariant(ExpId, 'B');
         _myClass.DEF("d", "e", "f");
         CheckResult(_myClass, null, null, null, "d", "e", "wtf");
     }
