@@ -11,12 +11,12 @@
    - a factory function that constructs your system under test but takes 11 parameters to cover all possible cases
    - a seperate function that performs the Asserts into which your result is passed, that also takes a bunch of parameters
    
- ...then you might have made your test code completely DRY, but unless you wrote it all yourself, you are going to have a hard time understanding it.
+ ...then the test code might be completely DRY, but unless you wrote it all yourself, it's probably going to be difficult to understand.
  
- - Don't be afraid to copy and paste when writing tests if you can keep them reasonably short. Tests should (hopefully) rarely change, so the code shouldn't present much of maintenance problem in the long term.
- - Aim for simplicity and readability over DRY and abstracted.
+ - Don't be afraid to copy and paste when writing tests if you can keep them reasonably short. Tests should (hopefully) rarely change, so the copied code shouldn't present much of maintenance problem.
+ - **Above all, aim for simplicity and readability over DRY and abstracted.**
  
- Imagine testing this stupid class that doesn't really do anything interesting.
+ Consider this stupid class that doesn't really do anything interesting.
  
  ```c#
  public class MyTestClass
@@ -56,7 +56,7 @@
  
  ### Noncompliant code
  
- Here the test code is almost completely dry, but quite difficult to read or reason about, especially the magic in the base class, and the `CheckResult` function.
+ Here the test code is almost completely dry, but quite difficult to read or reason about. There is magic happening in the base class, and we have a `CheckResult` function that takes a bunch of parameters.
  
  ```c#
 [TestFixture]
@@ -135,7 +135,7 @@ public class MyTestClassTest : BaseTest
  
  ### Compliant solution
  
- Here, the code is more verbose, and there's a bit of copy-pasting, but if one of these tests fails we'll be able to debug it very easily.
+ Here, the code is more verbose, and there's a bit of copy-pasting, but it's extremely clear, making debugging and fixing easy.
  
  ```c#
  [TestFixture]
@@ -203,4 +203,4 @@ public class MyTestClassTest : BaseTest
  }
  ```
  
- There is no hard science to this. Use your best judgement.
+ But there is no hard science to this. Use your best judgement.
