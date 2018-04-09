@@ -5,7 +5,7 @@ be obvious what went wrong and how to fix it. Test methods names should be in th
 
 ```<MethodUnderTest>_<OptionalPreConditions>_<PostCondition>()```
 
-### Noncompliant code example
+### Don't
 
 ```c#
 [Test]
@@ -13,7 +13,7 @@ public static void HazardLightsTest()
 {...}
 ```
 
-### Compliant solution
+### Do
 
 ```c#
 [Test]

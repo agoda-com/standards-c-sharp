@@ -1,4 +1,4 @@
-# Dependency management
+## Dependency management
 
 [Discuss](../../../code-standards/issues/3)
 

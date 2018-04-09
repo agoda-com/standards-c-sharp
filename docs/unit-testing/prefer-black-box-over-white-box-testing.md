@@ -27,7 +27,7 @@ public class Sleepy
 }
  ```
  
- ### Noncompliant code
+ ### Don't
  
  Notice the call to `dataProviderMock.Verify()`.
  
@@ -46,7 +46,7 @@ public class Sleepy
  }
  ```
   
- ### Compliant solution
+ ### Do
  
  For this case there is no need to verify the call to the data provider was made. This is an implementation detail that might change in the future, and could therefore cause the test to fail. All we care is that the output is correct for the given input - ie. the zeds were appended. We don't care _how_ this was achieved.
  

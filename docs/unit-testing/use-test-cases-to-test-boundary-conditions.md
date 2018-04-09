@@ -2,7 +2,7 @@
 
 `[TestCase]` is great for testing boundary conditions.
 
-### Compliant solution
+### Do
 
 ```c#
 [Test]

@@ -14,7 +14,7 @@ public interface IDogTranslator
 }
 ```
 
-### Noncompliant code
+### Don't
 
 Here, we see the `RepeatWord` function has been made public and tested separately.
 
@@ -52,7 +52,7 @@ public class DogTranslatorTest
 }
 ```
 
-### Compliant solution
+### Do
 
 `RepeatWord` is not part of the `IDogTranslator` interface. It exists only as an implementation detail. We should make it private it and remove its test. It will still be tested, but by calling through the public interface. We are now free to change the implementation of this detail without breaking any tests.
 

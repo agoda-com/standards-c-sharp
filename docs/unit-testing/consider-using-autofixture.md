@@ -4,7 +4,7 @@ Autofixture will automatically create test data. Consider using it to shorten yo
 
 https://github.com/AutoFixture/AutoFixture
 
-### Noncompliant code
+### Don't
 
 ```c#
 [Test]
@@ -21,7 +21,7 @@ public void CreateViewModel_FormatsLocation()
 }
 ```
 
-### Compliant solution
+### Do
 
 ```c#
 [Test]

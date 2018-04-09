@@ -4,7 +4,7 @@
 - In unit tests, we try to _isolate_ the code under test from the rest of the system. So if your function is already pure / isolated, it is instrinsically testable without any extra design work.
 - The below example is extremely contrived, but think about how this scales up to more complex cases. Keeping our functions pure where possible can simplify our code and make it easier to understand.
 
-### Noncompliant code
+### Don't
 
 Here the `Multiply()` function depends on another property. We require an instance of the class, and to set up its property before we can use it.  And this is reflected in the test.
 
@@ -28,7 +28,7 @@ public void Multiply_WithMultiplierSet_ReturnsArgumentMultipliedByMultiplier()
 }
 ```
 
-### Compliant solution
+### Do
 
 Here, because the function is pure, we don't need to even create an instance of the class or set anything up to test it.
 

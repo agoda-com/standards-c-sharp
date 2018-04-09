@@ -1,8 +1,8 @@
 # Index
 
-- [Web solution structure](web-solution.md)
-- [Dependency management](dependency-management.md)
+- [Web solution structure](./web-solution-structure)
+- [Dependency management](./dependency-management)
 - [Unit testing](./unit-testing)
-- [Exceptions](exceptions.md)
+- [Exceptions](./exceptions)
 
 [Initial brain dump for later discussions](brain-dump.md)

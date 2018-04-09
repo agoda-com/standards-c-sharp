@@ -5,7 +5,7 @@
 - Create one or more tests for each granular requirement.
 - Writing tests as spec gives us documentation _for free_. And, unlike Confluence or Word documents, this documentation **can never go out of date**!
 
-### Noncompliant code
+### Don't
 
 ```c#
 [Test]
@@ -17,7 +17,7 @@ public void CalculatorWorks()
 }
 ```
 
-### Compliant solution
+### Do
 
 ```c#
 [Test]

@@ -54,7 +54,7 @@
  
  ```
  
- ### Noncompliant code
+ ### Don't
  
  Here the test code is almost completely dry, but quite difficult to read or reason about. There is magic happening in the base class, and we have a `CheckResult` function that takes a bunch of parameters.
  
@@ -133,7 +133,7 @@ public class MyTestClassTest : BaseTest
 }
  ```
  
- ### Compliant solution
+ ### Do
  
  Here, the code is more verbose, and there's a bit of copy-pasting, but it's extremely clear, making debugging and fixing easy.
  

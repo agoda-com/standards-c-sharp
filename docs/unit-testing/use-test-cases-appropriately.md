@@ -2,7 +2,7 @@
 
 Overuse of `[TestCase]` can make it difficult to see what is actually being tested, especially when there are many parameters. This can results in a combinatorial explosion of cases as new parameters are added.
 
-### Noncompliant code
+### Don't
 
 Here it's difficult from the test name and cases to determine what we are actually testing.
 
@@ -40,7 +40,7 @@ public void ShouldNotRequestSecretDealForAgodaHomesTab(ProductType productType, 
 }
 ```
 
-### Compliant solution
+### Do
 
 By splitting the test into two and naming appropriately, the intention becomes more obvious.
 

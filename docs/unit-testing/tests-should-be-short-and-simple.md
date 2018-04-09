@@ -6,7 +6,7 @@
 - If there are very many asserts then that may be an indication you are testing too much in one go.
 - This relates to [Tests should be written as if they are a specification](tests-should-be-written-as-if-they-are-a-specification.md).
 
-### Noncompliant code
+### Don't
 
 Here, all the behavior of the class is tested in a single method.
 
@@ -70,7 +70,7 @@ public class PillViewModelBuilderTests
 }
 ```
 
-### Compliant solution
+### Do
 
 Now we are testing one requirement at a time.
 
