@@ -1,6 +1,6 @@
 ## Dependency management
 
-[Discuss](../../../../code-standards/issues/3)
+[Discuss](../../../../../code-standards/issues/3)
 
 Streamline registration of dependencies and minimize constructor paramters.
 
