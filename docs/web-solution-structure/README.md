@@ -41,7 +41,7 @@ Should be hosting environment agnostic - ie. should not depend on any HTTP abstr
 
 - Implements business logic and builds models.
 - May aggregate data from other other services if required.
-- Should take at least one non-pure dependency and must do some form of I/O, else should be converted to a static helper. If any methods can be made static, make them so.
+- Should take at least one non-pure dependency and/or must do some form of I/O, else should be converted to a static helper. If any methods can be made static, make them so.
 - Consider skipping the service entirely if it is only a thin wrapper around a repo or client library (eg. PAPI Client).
 
 ### Helpers
