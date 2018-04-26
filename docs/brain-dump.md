@@ -31,7 +31,7 @@ Unnecessary interfaces pollute the codebase and make it more difficult to unders
 - Keep each component's dependency count to a reasonable level. The more dependencies, the more difficult the code becomes to change. Let's say... 7?
 - Declare only impure services as dependencies (see above). This helps reduce the dependency count, and Keeps It Simple.
 - If a component's dependency count gets out of control this is a good indication that it should be refactored into more narrowly focused responsibilities.
-- Declare a component's dependencies explicitly in its constructor. Don't use property injection. It's super lame.
+- Declare a component's dependencies explicitly in its constructor. Don't use property injection. It's [super lame](http://simpleinjector.readthedocs.io/en/latest/advanced.html#property-injection).
 - Each injectable component should expose only a [single public constructor](https://www.cuttingedge.it/blogs/steven/pivot/entry.php?id=97). Multiple constructors lead to a fragile design and present maintainability issues.
 - Register dependencies with the container by decorating the class with a suitable attribute. (Done in YCS but not yet implemented in Dictator I believe).
 - **For the love of god do not use `ServiceLocator.Current`.** Inject your dependency through the constructor.
