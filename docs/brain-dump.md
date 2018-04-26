@@ -1,5 +1,7 @@
 ## Philosophy: KISS
 
+Obligatory trite quotes:
+
 _Keep It Simple, Stupid_ - Some guy
 
 _Everything should be made as simple as possible, but no simpler_ - Albert Einstein
