@@ -1,44 +1,8 @@
-These are the C# coding standards and practices for new (non-legacy) code. This is a living document. Please discuss on #code-quality and send a pull request if you would like to contribute.
-
-This document is currently a brain dump and will be broken up into focussed issues as we progress.
-
 ## Philosophy: KISS
 
 _Keep It Simple, Stupid_ - Some guy
 
 _Everything should be made as simple as possible, but no simpler_ - Albert Einstein
-
-## Folder structure
-
-_Organize primarily by what it does, not what it is._
-
-```
-+- MyProject
-   +- Functional Area 1 (eg. Geography)
-      +- Controllers
-      +- Repositories
-      +- Services
-      +- ViewModels
-   +- Functional Area 2 (eg. Search)
-      +- Controllers
-      +- Repositories
-      +- Services
-      +- ViewModels
-   etc.
-```
-
-Split functional areas into subfolders as/when they grow.
-
-Consider whether "DTO" is a better name than "ViewModel".
-
-Consider if your team name really represents a functional area, especially if you work in a horizontal.
-
-## Architecture
-
-- We follow a tiered architecture where the data flows Repo <=> Service <=> Controller <=> View Model / DTO.
-- Consider omitting the Service layer if it only serves as a trivial wrapper around the Repository. This reduces boilerplate and accelerates development. Yes, this means your controller can call a repository directly. Introduce the Service layer later once it becomes necessary.
-    - This is controversial. Should we try it and see how it works out?
-- The ViewModel / DTO layer must never be skipped (ie. do not serialize Service or Repository objects directly to the client). This isolates the client from changes to the backend, and prevents new and potentially sensitive fields from being inadvertently exposed. 
 
 ## Design
 
