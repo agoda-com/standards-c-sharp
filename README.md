@@ -1,5 +1,7 @@
 # Code quality and standards
 
+https://github.agodadev.io/pages/standards-c-sharp/code-standards/
+
 We'll use this repo to discuss and record our decisions for improving and standardizing our code at Agoda.
 
 What do we have so far? See the [docs](../../tree/master/docs).
