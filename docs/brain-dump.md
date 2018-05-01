@@ -6,69 +6,6 @@ _Keep It Simple, Stupid_ - Some guy
 
 _Everything should be made as simple as possible, but no simpler_ - Albert Einstein
 
-    
-## nulls
-
-_"The billion dollar mistake"_
-
-Avoid nulls where possible, because they:
-
-- DO BAD SHIT 
-- And also [much better reasons](https://www.lucidchart.com/techblog/2015/08/31/the-worst-mistake-of-computer-science/) (seriously, read it!)
-
-Consider using an Option/Maybe type to represent the potential absence of a value. 
-
-
-#### Don't
-
-```c#
-public List<int> GetPropertyIds(int hostId)
-{
-    var properties = propertyService.GetPropertiesForHost(hostId);
-    
-    if (properties == null || !properties.Any()) 
-    {
-        return null; 
-        // NO! Now the caller has to somehow know to deal with this special case.
-        // You are asking for a NullReferenceException in prod. Hope you like 
-        // 3am wakeup calls!
-    }
-    
-    return properties.Select(p => p.Id).ToList();
-}
-```
-
-#### Do
-
-```c#
-public List<int> GetPropertyIds(int hostId)
-{
-    var properties = propertyService.GetPropertiesForHost(hostId);
-    
-    if (properties == null) 
-    {
-        // Just return an empty List and everything should just work.
-        return Enumerable.Empty<int>().ToList();
-    }
-    
-    return properties.Select(p => p.Id).ToList();
-}
-```
-
-#### Even better
-
-```c#
-public List<int> GetPropertyIds(int hostId)
-{
-    // Fix propertyService.GetProperties() to never return null itself, and the
-    // code becomes even more elegant, BAM!
-    var properties = propertyService
-        .GetPropertiesForHost(hostId)
-        .Select(p => p.Id)
-        .ToList();
-}
-```
-
 ## Parallelism
 
 ### CPU bound
