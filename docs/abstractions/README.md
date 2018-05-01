@@ -20,9 +20,8 @@ public sealed class CustomerRepository : ICustomerRepository
 
     public void Save(Customer entity)
     {
-        // Not only do we tie ourselves to the ASP.NET Core MVC environment,
-        // but our class becomes annoying to test as we have to mock this
-        // long chain of objects:
+        // Not only do we tie ourselves to ASP.NET, but our class becomes annoying 
+        // to test as we have to mock this long chain of objects:
         entity.CreatedBy = this.accessor.HttpContext.User.Identity.Name;
         this.uow.Save(entity);
     }
