@@ -26,21 +26,3 @@ catch (System.UnauthorizedAccessException) // file is ReadOnly
 }
 
 ```
-
-### Don't
-
-```c#
-var file = File.Open("myfile.txt");
-try
-{
-    AppenData(file);
-}
-catch (System.UnauthorizedAccessException) // file is ReadOnly
-{
-    FileInfo fileInfo = new FileInfo(pathToAFile);
-    fileInfo.IsReadOnly = false;
-    AppendData(file);
-    // we gracefully recovered, so the exception can be swallowed
-}
-
-```
