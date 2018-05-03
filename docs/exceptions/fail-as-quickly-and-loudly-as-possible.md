@@ -39,6 +39,7 @@ catch (MyServiceException ex)
 ### Even better (for critical data)
 
 ```c#
-// If the data is critical to the page - in other words, the page is useless without it, just bubble it up to the global exception handler which will log it and show a generic 500 page.
+// If the data is critical to the page - in other words, the page is useless without
+// it - just the exception bubble it up to the global exception handler.
 return myService.GetData();
 ````
