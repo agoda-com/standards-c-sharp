@@ -2,18 +2,20 @@
 
 ### Register dependencies by convention using attributes
 
-Rather than having a monstrous file where all our dependencies are registered explicitly, we will create Lifestyle attributes, with which your class can be decorated to have it automatically registered to the container.
+- Avoid a huge unmaintanable config file where all our dependencies are registered explicitly.
+- Prefer to perform simple container registrations using an attribute.
 
+#### Don't
+
+```
+container.RegisterType<MyClass, MyInterface>(new ContainerControlledLifetimeManager());
+````
+
+#### Do
 ```c#
-public abstract class LifestyleAttribute : Attribute
-{ }
-
-public class PerRequestLifestyle : LifestyleAttribute
-{ }
-
-public class SingletonLifestyle : LifestyleAttribute
-{ }
-
-public class TransientLifestyle : LifestyleAttribute
-{ }
+[RegisterSingleton]
+public class MyClass : MyInterface 
+{
+  ...
+}
 ```
