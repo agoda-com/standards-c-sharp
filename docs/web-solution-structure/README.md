@@ -12,7 +12,7 @@ This describes the standard abstract solution structure preferred by Agoda for a
     - Trivial presentational logic (eg. formatting). Refactor into a presentational helper when necessary.
     - Trivial mapping logic, eg `MyViewModel.From(MyModel model)`. Refactor into a separate model builder when necessary.
 - View models don't need to be defined if they merely duplicate a model's properties, i.e. avoid 1-to-1 matching classes.
-- View models should include CMS contents required by a view, not models
+- View models should include the CMS content required by a view. CMS content should not be present in models.
 
 ### Views
 
