@@ -1,7 +1,5 @@
 # Web solution structure
 
-[Discuss here](../../../../issues/2)
-
 This describes the standard abstract solution structure preferred by Agoda for a web-based project. Each box represents one project in the solution. Use common sense and adapt to your specific use-case.
 
 ![Web solution structure](https://drive.google.com/uc?id=1ZobfNezweeamEs_FXFtp2e3xi8hvyb-Y)
