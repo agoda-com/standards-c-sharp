@@ -1,4 +1,4 @@
-# Index
+## Index
 
 **Guiding principle: Simplicity over complexity.**
 
