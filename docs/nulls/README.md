@@ -46,7 +46,7 @@ public IEnumerable<int> GetPropertyIds(int hostId)
 {
     // Fix propertyService.GetProperties() to never return null itself, and we
     // can skip the null check entirely.
-    var properties = propertyService
+    return propertyService
         .GetPropertiesForHost(hostId)
         .Select(p => p.Id);
 }
