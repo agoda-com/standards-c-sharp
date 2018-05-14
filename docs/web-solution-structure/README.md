@@ -44,7 +44,7 @@ Should be hosting environment agnostic - ie. should not depend on any HTTP abstr
 
 ### Helpers
 
-- Static classes with pure methods
+- Static classes with pure methods. [Read more about "Pure" methods](https://github.agodadev.io/pages/standards-c-sharp/code-standards/service-design#Static methods)
 - Prefer helpers over services for simplicity and to reduce constructor dependencies.
 
 ### Models
