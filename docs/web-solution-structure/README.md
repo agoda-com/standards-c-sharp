@@ -44,7 +44,7 @@ Should be hosting environment agnostic - ie. should not depend on any HTTP abstr
 
 ### Helpers
 
-- Static classes with pure methods. [More about Pure methods](../service-design/README.md)
+- Static classes with pure methods. [More about Pure methods](../service-design/README.md#Static%20methods)
 - Prefer helpers over services for simplicity and to reduce constructor dependencies.
 
 ### Models
