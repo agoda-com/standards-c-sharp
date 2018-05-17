@@ -7,8 +7,8 @@
 - To enable us to change existing code with confidence.
 
 ## Standards
-- [Test method names should clearly indicate what they are testing](test-method-names-should-clearly-indicate-what-they-are-testing.md).
-- [Tests should be written as if they are a specification](tests-should-be-written-as-if-they-are-a-specification.md).
+- [Test method names should clearly indicate what they are testing](test-method-names-should-clearly-indicate-what-they-are-testing.md)
+- [Tests should be written as if they are a specification](tests-should-be-written-as-if-they-are-a-specification.md)
 - [Tests should be short and simple](tests-should-be-short-and-simple.md)
 - [Use test cases appropriately](use-test-cases-appropriately.md)
 - [Use test cases to test boundary conditions](use-test-cases-to-test-boundary-conditions.md)
