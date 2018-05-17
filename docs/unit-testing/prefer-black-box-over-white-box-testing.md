@@ -3,13 +3,13 @@
 - **Black box**: we cannot "see" inside the code being tested - we consider only its input and output. What happens in  between is and magic that we don't need to understand. This makes refactoring easy, as we are free to change the implementation ("what's inside the box"), as long as the output stays the same.
  - **White box**: our test depends upon the implementation, for instance by verifying that a certain method was called. Classes such as directors or orchestrators, which serve only to call other methods, might be good candidates for white box testing, but use only as a last resort. White box tests are brittle and therefore harder to maintain.
  
- Consider the following code:
+Consider the following code:
  
- ```c#
- public interface IDataProvider
- {
-     string GetData();
- }
+```c#
+public interface IDataProvider
+{
+    string GetData();
+}
  
 public class Sleepy
 {
