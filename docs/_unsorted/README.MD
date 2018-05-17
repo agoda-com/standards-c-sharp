@@ -1,5 +1,7 @@
 # Index
 
+This is stuff that was migrated from an old repo. It should be discussed and integrated into the main structure.
+
 - [Common Pit falls](Common-Pit-falls/README.MD)
 - [Connection Pooling](Connection-Pooling/README.MD)
 - [DI Containers](/DI-Containers/README.MD)
