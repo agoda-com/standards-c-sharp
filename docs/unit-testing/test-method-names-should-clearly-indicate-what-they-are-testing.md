@@ -3,7 +3,9 @@
 A test's pre- and post-conditions should be obvious from its name, and perhaps its test cases. If it breaks, it should
 be obvious what went wrong and how to fix it. Test methods names should be in the format:
 
-```<MethodUnderTest>_<OptionalPreConditions>_<PostCondition>()```
+```c#
+<MethodUnderTest>_<OptionalPreConditions>_<PostCondition>()
+```
 
 ### Don't
 
