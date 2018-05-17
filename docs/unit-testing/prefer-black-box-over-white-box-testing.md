@@ -27,28 +27,28 @@ public class Sleepy
 }
  ```
  
- ### Don't
+### Don't
  
- Notice the call to `dataProviderMock.Verify()`.
+Notice the call to `dataProviderMock.Verify()`.
  
- ```c#
- [Test]
- public void GetSleepyData_MakesSleepy()
- {
-     var dataProviderMock = new Mock<IDataProvider>();
-     dataProviderMock.Setup(x => x.GetData()).Returns("I'm tired");
-     var sleepy = new Sleepy(dataProviderMock.Object);
+```c#
+[Test]
+public void GetSleepyData_MakesSleepy()
+{
+    var dataProviderMock = new Mock<IDataProvider>();
+    dataProviderMock.Setup(x => x.GetData()).Returns("I'm tired");
+    var sleepy = new Sleepy(dataProviderMock.Object);
 
-     var result = sleepy.GetSleepyData();
-     
-     Assert.AreEqual("I'm tired zzzzzzz", result);
-     dataProviderMock.Verify(x => x.GetData(), Times.Once);
- }
- ```
+    var result = sleepy.GetSleepyData();
+    
+    Assert.AreEqual("I'm tired zzzzzzz", result);
+    dataProviderMock.Verify(x => x.GetData(), Times.Once);
+}
+```
   
- ### Do
+### Do
  
- For this case there is no need to verify the call to the data provider was made. This is an implementation detail that might change in the future, and could therefore cause the test to fail. All we care is that the output is correct for the given input - ie. the zeds were appended. We don't care _how_ this was achieved.
+For this case there is no need to verify the call to the data provider was made. This is an implementation detail that might change in the future, and could therefore cause the test to fail. All we care is that the output is correct for the given input - ie. the zeds were appended. We don't care _how_ this was achieved.
  
  ```c#
 [Test]
