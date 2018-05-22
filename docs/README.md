@@ -13,3 +13,4 @@ Guiding principle: opt for simplicity over complexity.
 - [Abstractions](./abstractions)
 - [nulls](./nulls)
 - [Monads](./monads)
+- [Reflection](./reflection)
