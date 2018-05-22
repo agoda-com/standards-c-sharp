@@ -1,6 +1,6 @@
-# Index
+## Index
 
-Guiding principle: opt for simplicity over complexity.
+**Guiding principle: Simplicity over complexity.**
 
 > _Keep It Simple, Stupid_ - Some guy
 

@@ -1,7 +1,5 @@
 # Web solution structure
 
-[Discuss here](../../../../issues/2)
-
 This describes the standard abstract solution structure preferred by Agoda for a web-based project. Each box represents one project in the solution. Use common sense and adapt to your specific use-case.
 
 ![Web solution structure](https://drive.google.com/uc?id=1ZobfNezweeamEs_FXFtp2e3xi8hvyb-Y)
@@ -14,7 +12,7 @@ This describes the standard abstract solution structure preferred by Agoda for a
     - Trivial presentational logic (eg. formatting). Refactor into a presentational helper when necessary.
     - Trivial mapping logic, eg `MyViewModel.From(MyModel model)`. Refactor into a separate model builder when necessary.
 - View models don't need to be defined if they merely duplicate a model's properties, i.e. avoid 1-to-1 matching classes.
-- View models should include CMS contents required by a view, not models
+- View models should include the CMS content required by a view. CMS content should not be present in models.
 
 ### Views
 
@@ -46,7 +44,7 @@ Should be hosting environment agnostic - ie. should not depend on any HTTP abstr
 
 ### Helpers
 
-- Static classes with pure methods
+- Static classes with pure methods. [More about Pure methods](../service-design/README.md#static-methods)
 - Prefer helpers over services for simplicity and to reduce constructor dependencies.
 
 ### Models

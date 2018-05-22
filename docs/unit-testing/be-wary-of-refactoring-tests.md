@@ -54,9 +54,9 @@
  
  ```
  
- ### Don't
+### Don't
  
- Here the test code is almost completely dry, but quite difficult to read or reason about. There is magic happening in the base class, and we have a `CheckResult` function that takes a bunch of parameters.
+Here the test code is almost completely DRY, but quite difficult to read or reason about. There is magic happening in the base class, and we have a `CheckResult` function that takes a bunch of parameters.
  
  ```c#
 [TestFixture]
