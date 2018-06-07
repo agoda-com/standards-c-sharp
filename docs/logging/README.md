@@ -28,8 +28,8 @@ We use 4 log levels at Agoda.
 #### Error
 - Something quite bad happened, and we have failed the customer.
 - The final (or only) timeout from a service after a series of retries occured.
-- A high business value feature could not be displayed, making the page pretty much useless.
-- The conditional is actionable by the user, in that they might be able to manually retry.
+- A high business value feature could not be displayed, making the page pretty much useless (eg. could not load property data on property page).
+- The conditional is actionable by the user, in that they might be able to manually retry (even if it's just an F5)
 - All errors should be investigated, sooner rather than later.
 - If persistent, a war room may be called.
 - The global exception handler.
