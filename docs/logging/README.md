@@ -11,13 +11,13 @@
  
 We use 4 log levels at Agoda.
 
-#### INFO
+#### Info
 - All useful trace, debug and information events. Can be used to reconstruct a customer's journey through the site.
 - Normally would be filtered out during an investigation.  
 - 404s (people around the world are mashing their URL bars at us)
 - eg: "Calling FacebookAPI" 
 
-#### WARN
+#### Warn
 - Something unexpected happened, but we managed to muddle through.
 - Initial timeouts from services (where retries will happen automatically).
 - A low business value feature could not be displayed, but the page was still usable for its primary purpose.
@@ -25,7 +25,7 @@ We use 4 log levels at Agoda.
 - If it happens repeatedly then should be investigated.
 - eg: "Timed out when retrieving recent customer searches on homepage. Not rendering section." 
 
-#### ERROR
+#### Error
 - Something quite bad happened, and we have failed the customer.
 - The final (or only) timeout from a service after a series of retries occured.
 - A high business value feature could not be displayed, making the page pretty much useless.
@@ -35,7 +35,7 @@ We use 4 log levels at Agoda.
 - The global exception handler.
 - eg: "Timed out 5/5 times from PAPI. Showing user Try Again message."
 
-#### FATAL
+#### Fatal
 - Something catastrophic happened that is likely losing the company significant amounts of money.
 - Stop everything and fix now. A war room will be called.
 - Only pre-determined, known scenarios may be logged as fatal. We should analyze the various conditions that can constitute a fatal error.
