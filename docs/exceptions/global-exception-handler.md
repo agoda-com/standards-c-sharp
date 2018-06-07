@@ -1,4 +1,4 @@
-## There should always be a global exception handler
+## Make use of the global exception handler
 
 - This exception handler wraps your entire application and catches any unhandled exceptions.
 - At a minimum it should probably:
@@ -15,7 +15,7 @@ try
 }
 catch (AgodaIsDownException ex)
 {
-    Log.Error(ex); 
+    Log.Error(ex); // the global exception handler will do this anyway
     throw;
 }
 ```
@@ -23,7 +23,7 @@ catch (AgodaIsDownException ex)
 ### Do
 
 ```c#
-// Don't handle the exception at all since the global exception handler will give you the same hebavior as above.
+// simply:
 MyCriticalOperation();
 
 ```

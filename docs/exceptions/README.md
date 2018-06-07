@@ -10,7 +10,7 @@
 
 - [Be specific in what you catch](be-specific-in-what-you-catch.md)
 - [Only catch exceptions with good reason](only-catch-exception-with-good-reason.md)
-- [There should always be a global exception handler](there-should-always-be-a-global-exception-handler.md)
+- [Make use of the global exception handler](global-exception-handler.md)
 
 ### Swallowing exceptions
 

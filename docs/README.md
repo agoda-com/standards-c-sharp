@@ -15,3 +15,4 @@
 - [Monads](./monads)
 - [Reflection](./reflection)
 - [Logging](./logging)
+- [Static methods](./static-methods)
