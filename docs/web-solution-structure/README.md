@@ -11,7 +11,7 @@ This describes the standard abstract solution structure preferred by Agoda for a
 - Should be dumb and free of business logic, but may contain:
     - Trivial presentational logic (eg. formatting). Refactor into a presentational helper when necessary.
     - Trivial mapping logic, eg `MyViewModel.From(MyModel model)`. Refactor into a separate model builder when necessary.
-- View models don't need to be defined if they merely duplicate a model's properties, i.e. avoid 1-to-1 matching classes.
+- Only view models may be serialized to the client. Models or entities must never be sent to the client to prevent bloat and avoid exposing potentially sensitive data. Therefore, a mapping at the view model layer must always exist.
 - View models should include the CMS content required by a view. CMS content should not be present in models.
 
 ### Views
@@ -23,9 +23,8 @@ This describes the standard abstract solution structure preferred by Agoda for a
 
 - Should be thin wrappers around services, existing purely as a bridge between HTTP and the service layer.
 - Should be free of business logic.
-- Should accept and return View models / DTOs when communicating with the outside world.
-- Should accept and return Models when communicating internally.
-- Cannot be extended.
+- Should accept and return View models / DTOs when communicating with the browser.
+- Should accept and return Models or Entities when communicating with the service layer.
 
 ### Presentational helpers
 
@@ -61,7 +60,7 @@ Models are meant to be reusable, their properties should not be tightly coupled 
 
 ### Repos
 
-- Classes that return raw data from backend systems.
+- Classes that return raw data from backend systems (entities).
 - May not be needed at all if you are only consuming backend services through client libraries (eg. PAPI Client).
 
 ## Folder structure
