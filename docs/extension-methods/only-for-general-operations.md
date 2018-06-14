@@ -1,6 +1,6 @@
 ## Use only for general operations
 
-An extension method should only be used for very general operations - something that can reasonably apply to any instance of the type it is extending. This avoids polluting the namespace and adding noise to Intellisense.
+An extension method should only be used for very general operations - something that can reasonably apply to any instance of the extended type. This avoids polluting the namespace with mainly useless methods and adding noise to Intellisense.
 
 #### Don't
 		
@@ -8,9 +8,9 @@ An extension method should only be used for very general operations - something 
 // not all decimals represent currencies
 public static string FormatCurrency(this decimal amount, string currencyCode) 
 { ... }
-// here, we would prefer to create a Currency class, and add methods for formatting there
+// Here ^^^, we might prefer to create a Currency class, and add methods for formatting inside.
 
-// not all strings represent HTML
+// not all strings are HTML
 public static string StripHtmlTags(this string html) 
 { ... }
 ```
@@ -19,10 +19,10 @@ public static string StripHtmlTags(this string html)
 
 ```c#
 // all ints can be even
-public static bool IsEven(this int num) => 
+public static bool IsEven(this int num) 
 { ... }
 
-// all (async) tasks can be run synchronously
+// all async tasks can be run synchronously
 public static TResult RunSync<TResult>(this Func<Task<TResult>> func) 
 { ... }
 ```

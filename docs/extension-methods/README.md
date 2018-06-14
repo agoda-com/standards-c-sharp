@@ -13,4 +13,4 @@
 
 ### When not to use extension methods
 
-When your use case does not fall in to one of the above. Create a method on the interface / class itself.
+Unless your use case falls into one of the above then do not use an extension method. Create a standard method on the interface / class itself.
