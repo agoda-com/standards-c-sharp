@@ -17,3 +17,4 @@
 - [Logging](./logging)
 - [Static methods](./static-methods)
 - [Extension methods](./extension-methods)
+- [Dyanmics](./dynamics)
