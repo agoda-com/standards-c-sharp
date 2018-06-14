@@ -1,6 +1,4 @@
-## nulls
-
-> My billion-dollar mistake - Tony Hoare, inventor of null
+## nulls and IEnumerable
 
 ### Do not return null to represent an empty enumerable
 

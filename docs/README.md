@@ -16,3 +16,4 @@
 - [Reflection](./reflection)
 - [Logging](./logging)
 - [Static methods](./static-methods)
+- [Extension methods](./extension-methods)
