@@ -1,7 +1,7 @@
 ## Use of reflection
 
 ### Hard-coded string to identify types 
-Do not use hard coded strings to dynamically instantiate classes. They make refactorings such as moving namespaces difficult.
+Do not use hard coded strings to identify namespaces and types. They make automatic refactorings such as moving namespaces or renaming types impossible.
 
 #### Don't
 
