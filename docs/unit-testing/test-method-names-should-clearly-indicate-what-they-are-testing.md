@@ -4,7 +4,11 @@ A test's pre- and post-conditions should be obvious from its name, and perhaps i
 be obvious what went wrong and how to fix it. Test methods names should be in the format:
 
 ```c#
-public void <MethodUnderTest>_<OptionalPreConditions>_<PostCondition>()
+// seperated by underscores
+public void <MethodUnderTest>_<PostCondition>()
+{...}
+// or
+public void <MethodUnderTest>_<OptionalPreCondition>_<PostCondition>()
 {...}
 ```
 
