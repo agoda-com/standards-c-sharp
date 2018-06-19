@@ -21,7 +21,7 @@ We use 4 log levels at Agoda.
 - Something unexpected happened, but we managed to muddle through.
 - Initial timeouts from services (where retries will happen automatically).
 - A low business value feature could not be displayed, but the page was still usable for its primary purpose.
-- The condition is not actionable by the user, ie. they cannot and do not need to do anything to recover.
+- The condition is not actionable by the user, ie. they do not need to do anything to recover.
 - If it happens repeatedly then should be investigated.
 - eg: "Timed out when retrieving recent customer searches on homepage. Not rendering section." 
 
