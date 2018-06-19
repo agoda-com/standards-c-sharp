@@ -32,7 +32,7 @@ We use 4 log levels at Agoda.
 - The conditional is actionable by the user, in that they might be able to manually retry (even if it's just hitting F5)
 - All errors should be investigated, sooner rather than later.
 - If persistent, a war room may be called.
-- Anything hitting the global exception handler should be an error. (404s are not exceptions.)
+- Anything hitting the global exception handler in the 5xx response code range should be an error.
 - eg: "Timed out 5/5 times from PAPI. Showing user 'Try Again' message."
 
 #### Fatal
