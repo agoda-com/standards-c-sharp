@@ -7,13 +7,18 @@
 Therefore, names tests in one of the following formats:
 
 ```c#
-// seperated by underscores
-public void <MethodUnderTest>_<PostCondition>()
-{...}
+public class <ClassNameUnderTest>Tests 
+{
+    // seperated by underscores
+    [Test]
+    public void <MethodUnderTest>_<PostCondition>()
+    {...}
 
-// or
-public void <MethodUnderTest>_<PreCondition>_<PostCondition>()
-{...}
+    // or
+    [Test]
+    public void <MethodUnderTest>_<PreCondition>_<PostCondition>()
+    {...}
+}
 ```
 
 ### Don't
