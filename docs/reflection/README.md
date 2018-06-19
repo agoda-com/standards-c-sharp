@@ -7,12 +7,14 @@ Do not use hard coded strings to dynamically instantiate classes. They make refa
 
 ```c#
 // fails at runtime after namespace change
-Activator.CreateInstance("Agoda.Website.MVC", "Agoda.Website.MVC.MyType");
+var instance Activator.CreateInstance("Agoda.Website.MVC", "Agoda.Website.MVC.MyType");
+var type = Type.GetType("Agoda.Website.MVC.MyType")
 ```
 
 #### Do
 
 ```c#
 // fails at compile time after namespace change
-Activator.CreateInstance(typeof(Agoda.Website.MVC.MyType));
+var instance = Activator.CreateInstance(typeof(Agoda.Website.MVC.MyType));
+var type = typeof(Agoda.Website.MVC.MyType);
 ```
