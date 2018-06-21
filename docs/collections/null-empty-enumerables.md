@@ -1,6 +1,4 @@
-## nulls and IEnumerable
-
-### Do not return null to represent an empty enumerable
+## Do not return null to represent an empty enumerable
 
 #### Don't
 
