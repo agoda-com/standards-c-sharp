@@ -3,15 +3,15 @@
 - No one doubts the benefits of refactoring code. It reduces duplication and hopefully makes the code clearer and easier maintain.
  - Unit tests serve a different purpose from production code. They are primarily there to:
    1. ensure your code does what you think it does
-   2. enables you to change your code with confidence
- - It's this second point that is the most important here. As we refactor our production code, we rely on our unit tests to make sure we haven't broken anything.
+   2. enable you to refactor your code with confidence
+ - Refactoring means changing implementation without changing its result, and we want to make this as painless as possible. As we refactor our code, we rely on our unit tests to make sure we haven't broken anything.
  - When we break a test, we want to be able to diagnose and fix the problem as quickly as possible.
  - If the test is made up a bunch of complex abstractions, like...
    - a common `[BaseTest]` class that does a bunch of magic
    - a factory function that constructs your system under test but takes 11 parameters to cover all possible cases
    - a seperate function that performs the Asserts into which your result is passed, that also takes a bunch of parameters
    
- ...then the test code might be completely DRY, but unless you wrote it all yourself, it's probably going to be difficult to understand.
+ ...then the test code might be completely DRY, but it's probably also going to be difficult to understand.
  
  - Don't be afraid to copy and paste when writing tests if you can keep them reasonably short. Tests should (hopefully) rarely change, so the copied code shouldn't present much of maintenance problem.
  - **Above all, aim for simplicity and readability over DRY and abstracted.**
