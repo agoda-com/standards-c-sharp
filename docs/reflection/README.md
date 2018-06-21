@@ -1,20 +1,20 @@
 ## Use of reflection
 
 ### Hard-coded string to identify types 
-Do not use hard coded strings to identify namespaces and types. They make automatic refactorings such as moving namespaces or renaming types impossible.
+Do not use hard coded strings to identify namespaces and types. They make refactorings such as moving namespaces or renaming types harder, and can cause runtime failures.
 
 #### Don't
 
 ```c#
-// fails at runtime after change of namespace 
-var instance Activator.CreateInstance("Agoda.Website.MVC", "Agoda.Website.MVC.MyType");
-var type = Type.GetType("Agoda.Website.MVC.MyType")
+// both fail at runtime after change of namespace 
+var instance Activator.CreateInstance("Agoda", "Agoda.MyType");
+var type = Type.GetType("Agoda.MyType")
 ```
 
 #### Do
 
 ```c#
 // caught at compile time after change of namespace 
-var instance = Activator.CreateInstance(typeof(Agoda.Website.MVC.MyType));
-var type = typeof(Agoda.Website.MVC.MyType);
+var instance = Activator.CreateInstance(typeof(Agoda.MyType));
+var type = typeof(Agoda.MyType);
 ```
