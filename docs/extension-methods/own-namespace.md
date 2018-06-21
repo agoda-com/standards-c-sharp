@@ -6,6 +6,9 @@ This allows consumers to easily opt in or out of using your extensions and seein
 ```c#
 namespace Agoda.MyApp.MyExtensions
 {
-   ...    
+   public static class Extensions
+   {
+       ...
+   }
 }
 ```
