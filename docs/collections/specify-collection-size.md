@@ -20,7 +20,7 @@ endpoints.Add("192.168.1.50");
 #### Do
 
 ```c#
-var endpoints = new List<string>(50);
+var endpoints = new List<string>(50); // we know there will be 50 endpoints specified
 endpoints.Add("192.168.1.1");
 endpoints.Add("192.168.1.2");
 endpoints.Add("192.168.1.3");
