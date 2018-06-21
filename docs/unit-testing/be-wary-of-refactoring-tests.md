@@ -11,7 +11,7 @@
    - a factory function that constructs your system under test but takes 11 parameters to cover all possible cases
    - a seperate function that performs the Asserts into which your result is passed, that also takes a bunch of parameters
    
- ...then the test code might be completely DRY, but it's probably also going to be difficult to understand.
+ ...then the test code might be completely DRY, but it's probably also going to be difficult to understand, and time consuming to fix.
  
  - Don't be afraid to copy and paste when writing tests if you can keep them reasonably short. Tests should (hopefully) rarely change, so the copied code shouldn't present much of maintenance problem.
  - **Above all, aim for simplicity and readability over DRY and abstracted.**
