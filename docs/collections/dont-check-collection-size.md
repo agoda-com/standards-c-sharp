@@ -1,4 +1,4 @@
-## Do not check for presence elements before enumerating a collection
+## Do not check for presence of elements before enumerating a collection
 
 #### Don't
 
