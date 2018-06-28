@@ -12,15 +12,15 @@ endpoints.Add("192.168.1.1");
 endpoints.Add("192.168.1.2");
 endpoints.Add("192.168.1.3");
 // ...
-endpoints.Add("192.168.1.48");
-endpoints.Add("192.168.1.49");
-endpoints.Add("192.168.1.50");
+endpoints.Add("192.168.1.253");
+endpoints.Add("192.168.1.254");
+endpoints.Add("192.168.1.255");
 ```
 
 #### Do
 
 ```c#
-var endpoints = new List<string>(50); // we know there will be 50 endpoints specified
+var endpoints = new List<string>(255); // we know up front there will be 255 endpoints specified
 endpoints.Add("192.168.1.1");
 endpoints.Add("192.168.1.2");
 endpoints.Add("192.168.1.3");
