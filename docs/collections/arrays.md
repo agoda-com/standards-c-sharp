@@ -9,7 +9,7 @@
 > 
 > [Eric Lippert - Arrays considered somewhat harmful](https://blogs.msdn.microsoft.com/ericlippert/2008/09/22/arrays-considered-somewhat-harmful/)
 
-- Only use Arrays internally, and only then for performance critical code or cryptographic methods that require it.
+- Only use Arrays internally, and only then for performance critical code or when working with raw binary data (eg. the cryptographic methods).
 
 > I make a **lot** of use of arrays in my [protobuf-net](https://github.com/mgravell/protobuf-net) project; entirely for performance:
 >
