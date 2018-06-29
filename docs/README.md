@@ -61,7 +61,7 @@
 
 ## Collections
 
-#### Choosing the correct type
+#### Choosing the correct collection type <sup>NEW</sup>
 - [Choose the correct general collection implementation](collections/choosing-collection-implementation.md)
 - [Collections on public APIs](collections/public-api-types.md)
 - [Collections on non-public API methods](collections/non-public-api-types.md)
