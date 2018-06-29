@@ -1,7 +1,7 @@
 ## Do not use Arrays, except...
 
 - No `public` method may return an `Array`, with the exception of a `byte[]` when used to represent arbitary binary data.
-- There is almost always a better choice of collection than `Array`. [See here](choosing-collection-implementation.md).
+- There is almost [always a better](choosing-collection-implementation.md) choice of collection than `Array`. .
 
 > Arrays simply do not model any problem that I have at all well – I rarely need a collection which has the rather contradictory properties of being completely mutable, and at the same time, fixed in size. If I want to mutate a collection it is almost always to add something to it or remove something from it, not to change what value an index maps to. 
 >
