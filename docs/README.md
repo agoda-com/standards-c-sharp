@@ -3,14 +3,17 @@
 
 > _Keep It Simple, Stupid_ - Some guy
 
-## Infrastructure
+## Project structure
 
-- [Use a simple web solution structure](infrastructure/web-solution-structure.md)
-- [Register dependencies using attributes](infrastructure/attribute-based-registration.md)
-- [Service design guide](infrastructure/service-design.md)
-- [Do not depend on framework abstractions](infrastructure/framework-abstractions.md)
+- [Use a simple web solution structure](solution-structure/web-solution-structure.md)
 
-## Methods
+## Service design
+
+- [Service design guide](services/service-design.md)
+- [Do not depend on framework abstractions](services/framework-abstractions.md)
+- [Register dependencies using attributes](services/attribute-based-registration.md)
+
+## Method design
 
 #### Static and instance methods
 - [Prefer static methods over instance](static-methods/prefer-static-methods.md)
