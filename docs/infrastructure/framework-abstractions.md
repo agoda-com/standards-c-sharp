@@ -1,4 +1,4 @@
-## Abstractions
+## Do not depend on framework abstractions
 
 - Do not depend of framework abstractions (like `HttpContext`). They tie your code to a specific environment / implementation. Instead, create an abstraction specific to your application.
 - Consider the [Law (Suggestion) of Demeter](https://hackernoon.com/object-oriented-tricks-2-law-of-demeter-4ecc9becad85); that is, avoid long chains of accessors such as `a.b().c.d`. They tightly couple your code to the outside world, making it more difficult to change or test.

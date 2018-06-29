@@ -1,7 +1,7 @@
-## Don't use `Array`... almost ever
+## Do not use Arrays, except...
 
 - No `public` method may return an `Array`, with the exception of a `byte[]` when used to represent arbitary binary data.
-- There is [almost always a better choice of collection](choosing-collection-implementation.md) than `Array`.
+- There is almost always a better choice of collection than `Array`. [See here](choosing-collection-implementation.md).
 
 > Arrays simply do not model any problem that I have at all well – I rarely need a collection which has the rather contradictory properties of being completely mutable, and at the same time, fixed in size. If I want to mutate a collection it is almost always to add something to it or remove something from it, not to change what value an index maps to. 
 >
@@ -9,7 +9,7 @@
 > 
 > [Eric Lippert - Arrays considered somewhat harmful](https://blogs.msdn.microsoft.com/ericlippert/2008/09/22/arrays-considered-somewhat-harmful/)
 
-- Only use Arrays internally, and only then for performance critical code that requires it, eg. probably never:
+- Only use Arrays internally, and only then for performance critical code or cryptographic methods that require it.
 
 > I make a **lot** of use of arrays in my [protobuf-net](https://github.com/mgravell/protobuf-net) project; entirely for performance:
 >

@@ -3,9 +3,9 @@
 ### Choosing the correct type
 
 - [Choosing the correct general collection implementation](choosing-collection-implementation.md)
-- [For public API methods](public-api-types.md)
-- [For non-public APIs / methods internal to your project](non-public-api-types.md)
-- [Don't use arrays](arrays.md)
+- [Collections on public APIs](public-api-types.md)
+- [Collections on non-public API methods](non-public-api-types.md)
+- [Do not use Arrays, except...](arrays.md)
 - [Queues](queues.md)
 - [IQueryable](iqueryable.md)
 

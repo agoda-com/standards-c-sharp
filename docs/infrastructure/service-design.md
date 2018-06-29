@@ -20,6 +20,7 @@ Unnecessary interfaces pollute the codebase and make it more difficult to unders
 - A pure function operates in-memory and doesn't depend on external resources such as network calls, reading from hard disk etc. It therefore doesn't need to be mocked, swapped out, or injected. Create such functions as static.
 - If something _can_ be static, then it probably _should_ be.
 - If a component has both static and instance methods, then consider moving the static methods into their own helper class.
+- More on [static methods](../static-methods/when-static.md) vs [instance methods](../static-methods/when-instance.md).   
 
 ### Dependencies
 
@@ -28,7 +29,7 @@ Unnecessary interfaces pollute the codebase and make it more difficult to unders
 - A high dependency count is a good indication that a component should be refactored into more narrowly focused responsibilities.
 - Declare a component's dependencies explicitly in its constructor. Don't use property injection. It's [super lame](http://simpleinjector.readthedocs.io/en/latest/advanced.html#property-injection).
 - Each injectable component should expose only a [single public constructor](https://www.cuttingedge.it/blogs/steven/pivot/entry.php?id=97). Multiple constructors lead to a fragile design and present maintainability issues. Use the [null object pattern](https://en.wikipedia.org/wiki/Null_object_pattern) for truly optional dependencies.
-- Prefer attribute based registration over explicit registration - eg. decorate your class with `[RegisterSingleton]` rather than registering directly with the container.
+- Prefer [attribute based registration](attribute-based-registration.md) over explicit registration - eg. decorate your class with `[RegisterSingleton]` rather than registering directly with the container.
 - **Do not use `DependencyResolver.Current`.** Inject your dependency through the constructor. [Read more](http://blog.ploeh.dk/2010/02/03/ServiceLocatorisanAnti-Pattern/).
 
 ### Example
