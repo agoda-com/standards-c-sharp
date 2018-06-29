@@ -71,7 +71,6 @@
 
 #### General
 - [Do not return null to represent an empty enumerable](collections/null-empty-enumerables.md)
-- [Specify the initial capacity of a collection when known](collections/specify-collection-size.md)
 - [Do not check for presence of elements before enumerating a collection](collections/dont-check-collection-size.md)
 
 ## Code style
