@@ -1,8 +1,9 @@
-## Specify a collection size when it is know
+## Specify a collection size when it is known
 
 - Most of .NET common collections like `List<>` use arrays internally with a default capacity of 4.
 - When you add more items, the `List` creates a new array with double items count and copies the old array to the new one.
 - If the list is large and you can predict the size of the collection at compile time, then you may be able to prevent unnecessary allocations and GCs by specifying the capacity up front.
+- Note that this is somewhat of a micro-optimization and may only be worth it with very large lists.
 
 #### Don't
 
