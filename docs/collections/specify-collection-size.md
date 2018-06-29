@@ -25,7 +25,7 @@ endpoints.Add("192.168.1.1");
 endpoints.Add("192.168.1.2");
 endpoints.Add("192.168.1.3");
 // ...
-endpoints.Add("192.168.1.48");
-endpoints.Add("192.168.1.49");
-endpoints.Add("192.168.1.50");
+endpoints.Add("192.168.1.253");
+endpoints.Add("192.168.1.254");
+endpoints.Add("192.168.1.255");
 ```
