@@ -1,7 +1,7 @@
-## Keep functions pure if possible
+## Keep application functions pure if possible
 
-- A Pure function is a function that always returns the same value given the same input, and has no side-effects. It is therefore _isolated_ from the outside world - it depends only on its arguments.
-- In unit tests, we try to _isolate_ the code under test from the rest of the system. So if your function is already pure / isolated, it is instrinsically testable without any extra design work.
+- A pure function is a function that always returns the same value given the same input, and has no side-effects. It is therefore _isolated_ from the outside world - it depends only on its arguments.
+- In unit tests, we try to _isolate_ the code under test from the rest of the system. So if your function is already pure (isolated), it is instrinsically testable without any extra design work.
 - The below example is extremely contrived, but think about how this scales up to more complex cases. Keeping our functions pure where possible can simplify our code and make it easier to understand.
 
 ### Don't

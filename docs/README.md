@@ -5,7 +5,7 @@
 
 ## Project structure
 
-- [Use a simple web solution structure](solution-structure/web-solution-structure.md)
+- [Keep web solution structure simple](solution-structure/web-solution-structure.md)
 
 ## Service design
 
@@ -16,7 +16,7 @@
 ## Method design
 
 #### Static and instance methods
-- [Prefer static methods over instance](static-methods/prefer-static-methods.md)
+- [Prefer pure static methods over instance](static-methods/prefer-static-methods.md)
 - [When to write a static method](static-methods/when-static.md)
 - [When to write an instance method](static-methods/when-instance.md)
 

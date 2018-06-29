@@ -1,6 +1,8 @@
 ## Only test the public interface
 
-- This relates to [Prefer black box over white box testing](prefer-black-box-over-white-box-testing.md). By testing the internals of a class, your tests become brittle and you class becomes more difficult to refactor.
+- This relates to [Prefer black box over white box testing](prefer-black-box-over-white-box-testing.md). By testing the internals of a class, your tests become brittle as you are not only testing the _result_ but also the _implementation_.
+- When testing implementation, in becomes set in stone, so your class becomes more difficult to refactor without also changing tests. This is the opposite of what we want to achieve.
+- When refactoring, the best case scenario is: make changes -> run tests -> everything still passes. This becomes much less likely if internals are being tested.
 - If a class is difficult to test through its public interface, then this may be a code smell that the class is poorly designed. If _you_ as the author are having trouble using your class, think about your poor consumers.
 - **Never** make a method public just so it can be tested. Each time you do this **multiple** kittens die.
 - Do not use the [`InternalsVisibleToAttribute`](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.internalsvisibletoattribute?view=netframework-4.7.1) for the aforementioned reasons. Won't someone think of the kittens?
@@ -54,7 +56,7 @@ public class DogTranslatorTest
 
 ### Do
 
-`RepeatWord` is not part of the `IDogTranslator` interface. It exists only as an implementation detail. We should make it private it and remove its test. It will still be tested, but by calling through the public interface. We are now free to change the implementation of this detail without breaking any tests.
+`RepeatWord` is not part of the `IDogTranslator` interface. It exists only as an implementation detail. We should make it private it and remove its test. It will still be tested, but by calling through the public interface. We are now free to change the implementation without breaking the test.
 
 ```c#
 public class DogTranslator : IDogTranslator
