@@ -11,25 +11,31 @@
 - [Do not depend on framework abstractions](infrastructure/framework-abstractions.md)
 
 ## Methods
+
 #### Static and instance methods
 - [Prefer static methods over instance](static-methods/prefer-static-methods.md)
 - [When to write a static method](static-methods/when-static.md)
 - [When to write an instance method](static-methods/when-instance.md)
+
 #### Extension methods
 - [General guidance](extension-methods/general.md)
 - [When (and when not) to write an extension method](extension-methods/when.md)
 
 ## Exceptions
+
 #### Throwing exceptions
 - [Fail as quickly and as loudly as possible](exceptions/fail-as-quickly-and-loudly-as-possible.md)
 - [Only throw exceptions in exceptional circumstances](exceptions/only-throw-exceptions-in-exceptional-circumstances.md)
+
 #### Catching exceptions
 - [Be specific in what you catch](exceptions/be-specific-in-what-you-catch.md)
 - [Only catch exceptions with good reason](exceptions/only-catch-exception-with-good-reason.md)
 - [Make use of the global exception handler](exceptions/global-exception-handler.md)
+
 #### Swallowing exceptions
 - [Critical vs non-critical exceptions](exceptions/critical-vs-non-critical-exceptions.md)
 - [Don't swallow exceptions unless you can gracefully recover](exceptions/dont-swallow-exceptions-unless-you-can-gracefully-recover.md)
+
 #### Rethrowing exceptions
 - [How to rethrow an exception from a catch block](exceptions/how-to-rethrow-an-exception-from-a-catch-block.md)
 - [Rethrow exceptions when you cannot gracefully recover](exceptions/rethrow-exceptions-when-you-cannot-gracefully-recover.md)
@@ -51,6 +57,7 @@
 - [Further reading](https://github.com/jpreese/CSharpUnitTestingBestPractices)
 
 ## Collections
+
 #### Choosing the correct type
 - [Choose the correct general collection implementation](collections/choosing-collection-implementation.md)
 - [Collections on public APIs](collections/public-api-types.md)
@@ -58,6 +65,7 @@
 - [Do not use Arrays, except...](collections/arrays.md)
 - [Queues](collections/queues.md)
 - [IQueryable](collections/iqueryable.md)
+
 #### General
 - [Do not return null to represent an empty enumerable](collections/null-empty-enumerables.md)
 - [Specify the initial capacity of a collection when known](collections/specify-collection-size.md)
