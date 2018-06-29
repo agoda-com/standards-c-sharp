@@ -13,7 +13,7 @@
    
  ...then the test code might be completely DRY, but it's probably also going to be difficult to understand, and time consuming to fix.
  
- - Don't be afraid to copy and paste when writing tests if you can keep them reasonably short. Tests should (hopefully) rarely change, so the copied code shouldn't present much of maintenance problem.
+ - Don't be afraid to copy and paste a little when writing tests, as long as you can keep them relatively short (and you should). Tests should (hopefully) rarely change, so the duplicated code shouldn't present much of maintenance problem.
  - **Above all, aim for simplicity and readability over DRY and abstracted.**
  
  Consider this stupid class that doesn't really do anything interesting.
