@@ -3,15 +3,15 @@
 
 > _Keep It Simple, Stupid_ - Some guy
 
-## Project structure
+## Project structure and design
 
 - [Keep web solution structure simple](solution-structure/web-solution-structure.md)
-
-## Service design
-
 - [Service design guide](services/service-design.md)
 - [Do not depend on framework abstractions](services/framework-abstractions.md)
-- [Register dependencies using attributes](services/attribute-based-registration.md)
+
+## IoC
+- [Register dependencies using attributes](di/attribute-based-registration.md)
+- [Do not use stereotype-style registrations](di/stereotypes.md)
 
 ## Method design
 
@@ -68,12 +68,14 @@
 - [Do not use Arrays, except...](collections/arrays.md)
 - [Queues](collections/queues.md)
 - [IQueryable](collections/iqueryable.md)
+- [Immutable collections](collections/immutable.md)
 
 #### General
 - [Do not return null to represent an empty enumerable](collections/null-empty-enumerables.md)
 - [Do not check for presence of elements before enumerating a collection](collections/dont-check-collection-size.md)
 
 ## Code style
+- [Naming conventions](code-style/naming-conventions.md)
 - [Monads](code-style/monads.md)
 - [Reflection](code-style/reflection.md)
 - [Dyanmics](code-style/dynamics.md)
