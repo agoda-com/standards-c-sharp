@@ -11,7 +11,7 @@
 
 ## IoC
 - [Register dependencies using attributes](di/attribute-based-registration.md)
-- [Do not use stereotype-style registrations](di/stereotypes.md)
+- [Do not use stereotype-style registrations](di/stereotypes.md) <sup>NEW</sup>
 
 ## Method design
 
@@ -75,7 +75,7 @@
 - [Do not check for presence of elements before enumerating a collection](collections/dont-check-collection-size.md)
 
 ## Code style
-- [Naming conventions](code-style/naming-conventions.md)
+- [Naming conventions](code-style/naming-conventions.md) <sup>NEW</sup>
 - [Monads](code-style/monads.md)
 - [Reflection](code-style/reflection.md)
 - [Dyanmics](code-style/dynamics.md)
