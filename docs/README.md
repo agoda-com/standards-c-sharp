@@ -61,7 +61,7 @@
 
 ## Collections
 
-#### Choosing the correct collection type <sup>NEW</sup>
+#### Choosing the correct collection type 
 - [Choose the correct general collection implementation](collections/choosing-collection-implementation.md)
 - [Collections on public APIs](collections/public-api-types.md)
 - [Collections on non-public API methods](collections/non-public-api-types.md)
@@ -81,6 +81,11 @@
 - [Dyanmics](code-style/dynamics.md)
 - [#regions](code-style/regions.md)
 
+## Configuration <sup>NEW</sup>
+- [If it's unlikely to change, don't make it configurable](configuration/unlikely-to-change.md)
+- [Use Consul for your app settings](configuration/consul.md)
+- [Use Agoda's config-consul library to interact with Consul](configuration/config-consul.md)
+- [Config files should only be used for Consul client settings](configuration/config-files.md)
 
 ## Logging
 - [Logging](logging/general.md)

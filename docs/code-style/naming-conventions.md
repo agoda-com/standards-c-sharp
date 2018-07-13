@@ -1,8 +1,8 @@
 ## Naming conventions
 
-Naming conventions are pretty arbitrary, so long debates over them are not productive. The important thing is consistency across the code base. Therefore, we have fairly arbitrarily chosen the following conventions. If we haven't chosen your ones, then we are truly sorry. But we have to pick something, and really there are much more important things to worry about.
+Naming conventions are pretty arbitrary, so long debates over them are not productive. The important thing is consistency across the code base. If our chosen conventions down t align with your favorites, then we are truly sorry, but it is impossible to please everyone. We have to pick something, and there are much more important things to worry about.
 
-All standard .NET naming conventions are to be followed, except for those listed here, which have never really been standardized, or whose standards have not been used consistently even within Microsoft's own code.
+We follow the default naming conventions suggested by Resharper. This way, out of the box all developers can be warned when a convention is violated, and provided with a quick-fix. Resharper's naming conventions are pretty uncontroversial, except perhaps for the following:
 
 ### Private fields
 
