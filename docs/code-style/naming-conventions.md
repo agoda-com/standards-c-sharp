@@ -1,6 +1,6 @@
 ## Naming conventions
 
-Naming conventions are pretty arbitrary, so long debates over them are not productive. The important thing is consistency across the code base. If our chosen conventions down t align with your favorites, then we are truly sorry, but it is impossible to please everyone. We have to pick something, and there are much more important things to worry about.
+Naming conventions are pretty arbitrary, so long debates over them are not productive. The important thing is consistency across the code base. If our chosen conventions don't align with your favorites, then we are truly sorry, but it is impossible to please everyone. We have to pick something, and there are much more important things to worry about.
 
 We follow the default naming conventions suggested by Resharper. This way, out of the box all developers can be warned when a convention is violated, and provided with a quick-fix. Resharper's naming conventions are pretty uncontroversial, except perhaps for the following:
 
