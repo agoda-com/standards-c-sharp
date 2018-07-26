@@ -1,6 +1,6 @@
 ## Avoid race conditions with proper synchronization
 
-Be careful to avoid race conditions where state might be mutated by multiple threads. Since you cannot `await` from inside a `lock` statement, either use a thread safe datatype, or synchronize access manually with a `SemaphoreSlim`:
+Be careful to avoid race conditions when state is mutated from multiple threads. Since you cannot `await` from inside a `lock` statement, either use a thread safe datatype, or synchronize access manually with a `SemaphoreSlim`:
 
 #### Don't
 ```c#
@@ -10,6 +10,7 @@ Task<int> GetNextValueAsync(int current) { ... }
 
 async Task UpdateValueAsync()
 {
+    // likely to corrupt if accessed by multiple threads
     value = await GetNextValueAsync(value);
 }
 ```

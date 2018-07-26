@@ -1,7 +1,7 @@
 ## Prefer `await task` over `task.Result`
 
 - To get the result of a task, prefer `await task` over `task.Result`.
-- `await` does not wrap the exception in an `AggregateException`, whereas `Task.Result` does. Ideally, we should never have to deal with `AggregateException` at all, unless we specifically want to.
+- `await` does not wrap the exception in an `AggregateException`, whereas `Task.Result` does. Ideally, we should never have to deal with an `AggregateException` at all.
 - We avoid accidentally blocking the thread. `Task.Result` blocks until the task has completed. `await` never blocks.
 - `Task.Result` and `Task.Wait` [can cause deadlocks](http://blog.stephencleary.com/2012/07/dont-block-on-async-code.html) in certain situations.
 

@@ -75,15 +75,16 @@
 - [Do not check for presence of elements before enumerating a collection](collections/dont-check-collection-size.md)
 
 ## Asynchronous programming <sup>NEW</sup>
+- [Avoid blocking when possible](async/avoid-blocking.md)
 - [Always use the asynchronous version of a method when it exists](async/consume-async-method.md)
-- [Do not expose sync and async versions of methods](async/expose-async-method.md)
-- [Return `Task` instead of `void` for async methods with no return value](async/do-not-return-void.md)
-- [Use `await Task.WhenAny/All` instead of `Task.WaitAny/All`](async/when-any-all.md)
-- [Prefer `await task` over `task.Result`](async/await-task-result.md)
+- [Do not expose both sync and async versions of methods](async/expose-async-method.md)
 - [Avoid mixing synchronous and asynchronous code](async/avoid-mixing-async-sync.md)
-- [Correct use of `ConfigureAwait(false)`](async/configure-await.md)
+- [Return `Task` instead of `void` for async methods with no return value](async/do-not-return-void.md)
+- [Prefer `await task` over `task.Result`](async/await-task-result.md)
+- [Use `await Task.WhenAny/All` instead of `Task.WaitAny/All`](async/when-any-all.md)
 - [Prefer to start tasks with `Task.Run`](async/prefer-task-run.md)
 - [Avoid race conditions with proper synchronization](async/avoid-race-conditions.md)
+- [Correct use of `ConfigureAwait(false)`](async/configure-await.md)
 
 ## Code style
 - [Naming conventions](code-style/naming-conventions.md) <sup>NEW</sup>
