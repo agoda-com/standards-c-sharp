@@ -90,8 +90,8 @@
 - [Naming conventions](code-style/naming-conventions.md) <sup>NEW</sup>
 - [Monads](code-style/monads.md)
 - [Reflection](code-style/reflection.md)
-- [Dyanmics](code-style/dynamics.md)
-- [`#region`s](code-style/regions.md)
+- [`dynamic`](code-style/dynamics.md)
+- [`#region`](code-style/regions.md)
 
 ## Configuration <sup>NEW</sup>
 - [If it's unlikely to change, don't make it configurable](configuration/unlikely-to-change.md)
