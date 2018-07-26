@@ -1,6 +1,6 @@
 ## Use `await Task.WhenAny/All` instead of `Task.WaitAny/All`
 
-To wait for tasks to finish, use `await Task.WhenAll/Any` instead of `Task.WaitAll/Any` or `Task.Result`. The latter block the thread while the tasks complete, defeating the purpose of using async.
+To wait for tasks to finish, use `await Task.WhenAll/Any` instead of `Task.WaitAll/Any` or `Task.Result`. The latter blocks the thread while the tasks complete, defeating the purpose of using async.
 
 #### Don't
 ```c#
