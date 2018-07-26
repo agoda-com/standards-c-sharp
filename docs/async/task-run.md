@@ -1,6 +1,6 @@
 ## Prefer to start tasks with `Task.Run`
 
-- Prefer `Task.Run` over `Task.Factory.StartNew` over `new Task()`.
+Prefer `Task.Run` over `Task.Factory.StartNew` over `new Task()`.
 
 ### When to use `Task.Factory.StartNew`
 

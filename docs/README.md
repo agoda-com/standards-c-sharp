@@ -82,7 +82,7 @@
 - [Return `Task` instead of `void` for async methods with no return value](async/do-not-return-void.md)
 - [Prefer `await task` over `task.Result`](async/await-task-result.md)
 - [Use `await Task.WhenAny/All` instead of `Task.WaitAny/All`](async/when-any-all.md)
-- [Prefer to start tasks with `Task.Run`](async/prefer-task-run.md)
+- [Prefer to start tasks with `Task.Run`](async/task-run.md)
 - [Avoid race conditions with proper synchronization](async/avoid-race-conditions.md)
 - [Correct use of `ConfigureAwait(false)`](async/configure-await.md)
 
