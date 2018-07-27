@@ -51,7 +51,7 @@
 - [Tests should be short and simple](unit-testing/tests-should-be-short-and-simple.md)
 - [Use test cases appropriately](unit-testing/use-test-cases-appropriately.md)
 - [Use test cases to test boundary conditions](unit-testing/use-test-cases-to-test-boundary-conditions.md)
-- [Keep functions pure if possible](unit-testing/keep-functions-pure-if-possible.md)
+- [Keep app functions pure if possible](unit-testing/keep-functions-pure-if-possible.md)
 - [Be wary of refactoring tests](unit-testing/be-wary-of-refactoring-tests.md)
 - [Prefer black box over white box testing](unit-testing/prefer-black-box-over-white-box-testing.md)
 - [Only test the public interface](unit-testing/only-test-the-public-interface.md)
@@ -69,6 +69,7 @@
 - [Queues](collections/queues.md)
 - [IQueryable](collections/iqueryable.md)
 - [Immutable collections](collections/immutable.md)
+- [Using reference types as keys](collections/reference-types-as-keys.md)
 
 #### General
 - [Do not return null to represent an empty enumerable](collections/null-empty-enumerables.md)
