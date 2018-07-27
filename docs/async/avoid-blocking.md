@@ -6,7 +6,7 @@
 
 #### Don't
 ```c#
-Task.Delay(5000); // thread is blocked for 5 seconds
+Thread.Sleep(5000); // thread is blocked for 5 seconds
 ```
 
 #### Do
