@@ -1,1 +1,0 @@
-Web api calls and session state and why Api calls should be stateless, and the work around for the exceptions to the rule

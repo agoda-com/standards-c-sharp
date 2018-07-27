@@ -1,1 +1,0 @@
-Container life times and when to use which ones
