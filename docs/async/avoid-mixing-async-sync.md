@@ -4,17 +4,19 @@ Avoid mixing synchronous and asynchronous code. Doing so can lead to confusing d
 
 #### Don't
 ```c#
-public int MyMethod() 
+public int MyMethod(int input) 
 {
-    var task = MyAsyncMethod();
+    // ...
+    var task = _dependency.DoWorkAsync(input);
     return task.Result; // blocks thread until task completes
 }
 ```
 
 #### Do
 ```c#
-public async Task<int> MyMethod()
+public async Task<int> MyMethodAsync(int input)
 {
-    return await MyAsyncMethod(); // returns thread to threadpool while task completes
+    // ...
+    return _dependency.DoWorkAsync(input); // returns thread to threadpool while task completes
 }
 ```

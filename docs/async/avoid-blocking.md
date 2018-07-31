@@ -1,7 +1,7 @@
 ## Avoid blocking when possible
 
 - Increase performance and scalability of your code by avoiding blocking calls.
-- A blocking call ties up the thread while it waits for a response. During this time, it could have been doing something more useful, like serving other requests, or redrawing the GUI.
+- A blocking call ties up the thread while it waits for a response. During this time, it could have been doing something more useful, like serving other requests or redrawing the GUI.
 - A non-blocking call returns the thread to the threadpool, or keeps the GUI thread responsive, while the task completes.
 
 #### Don't
@@ -27,7 +27,7 @@ public void CreateCsv()
 
 #### Do
 ```c#
-public async Task CreateCsv()
+public async Task CreateCsvAsync()
 {
     using(var writer = File.CreateText("myfile.csv"))
     {
