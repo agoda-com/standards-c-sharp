@@ -63,7 +63,7 @@
 - [Consider using AutoFixture](unit-testing/consider-using-autofixture.md)
 - [Further reading](https://github.com/jpreese/CSharpUnitTestingBestPractices)
 
-#### E2E tests
+#### E2E tests <sup>NEW</sup>
 
 - [Use a Page Object to interact with your app](e2e-testing/page-object-model.md)
 - [Use the `data-selenium` attribute to identify your elements](e2e-testing/data-selenium.md)
