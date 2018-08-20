@@ -100,10 +100,10 @@
 
 ## Code style
 - [Naming conventions](code-style/naming-conventions.md)
-- [Monads](code-style/monads.md)
+- [Do not (explicitly) use monads](code-style/monads.md)
 - [Reflection](code-style/reflection.md)
-- [`dynamic`](code-style/dynamics.md)
-- [`#region`](code-style/regions.md)
+- [Do not use `dynamic`](code-style/dynamics.md)
+- [Do not use `#region`](code-style/regions.md)
 
 ## Configuration
 - [If it's unlikely to change, don't make it configurable](configuration/unlikely-to-change.md)
