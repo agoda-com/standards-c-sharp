@@ -21,6 +21,8 @@ public class <SystemUnderTest>Tests
 }
 ```
 
+For a unit test, the `<SystemUnderTest>` should be the class name, and the `<SubsystemUnderTest>` should be the method name.
+
 ### Don't
 
 ```c#
@@ -33,7 +35,7 @@ public void HazardLightsTest()
 
 ```c#
 [Test]
-public void HarzardLightsToggle_WhenLightsAlreadyBlinking_StopsBlinking()
+public void HarzardLightsToggle_WhenLightsAlreadyBlinking_BlinkingShouldStop()
 {...}
 ```
 

@@ -50,7 +50,6 @@
 - [Test method names should clearly indicate what they are testing](testing/test-method-names-should-clearly-indicate-what-they-are-testing.md)
 - [Write tests as if they are a specification](testing/tests-as-a-specification.md)
 
-
 #### Unit tests
 
 - [Unit tests should be short and simple](unit-testing/tests-should-be-short-and-simple.md)
