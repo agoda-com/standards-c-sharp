@@ -13,7 +13,7 @@ Page URLs and selectors are hard coded into the test. We are also tighly bound t
 
 ```c#
 [Test]
-public void LoginButton_WhenClicked_FocussesUsernameTextbox()
+public void LoginButton_WhenClicked_FocusesUsernameTextbox()
 {
     Driver.Navigate().GoToUrl("https://qa-site/home.html");
     var showLoginFormButton = Driver.FindElement(By.CssSelector("[data-selenium=show-login-button]"));
@@ -38,7 +38,7 @@ public abstract class PageObjectBase
         Driver.Navigate().GoToUrl(url);
     }
     
-    public bool IsFocussed(IWebElement element)
+    public bool IsFocused(IWebElement element)
     {
         return Driver.SwitchTo().ActiveElement().Equals(element);
     }
@@ -73,14 +73,14 @@ public class HomePageObject : PageObjectBase
 }
 
 [Test]
-public void LoginButton_WhenClicked_FocussesUsernameTextbox()
+public void LoginButton_WhenClicked_FocusesUsernameTextbox()
 {
     var homePage = new HomePageObject();
     homePage.Nagivate();
     
     homePage.ShowLoginFormButton.Click();
     
-    Assert.IsTrue(homePage.IsFocussed(homePage.UsernameTextBox));
+    Assert.IsTrue(homePage.IsFocused(homePage.UsernameTextBox));
 }
 
 ```
