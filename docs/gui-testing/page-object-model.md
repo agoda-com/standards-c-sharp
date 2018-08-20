@@ -30,7 +30,6 @@ public void LoginButton_WhenClicked_FocusesUsernameTextbox()
 Page URLs and selectors are separated from test. Our Page Object provides a clean, abstract API to interact with our page.
 
 ```c#
-
 public abstract class PageObjectBase
 {
     protected void Navigate(string url)
