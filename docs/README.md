@@ -62,11 +62,11 @@
 - [Consider using AutoFixture](unit-testing/consider-using-autofixture.md)
 - [Further reading](https://github.com/jpreese/CSharpUnitTestingBestPractices)
 
-#### E2E tests <sup>NEW</sup>
+#### GUI and E2E tests <sup>NEW</sup>
 
-- [Use a Page Object to interact with your app](e2e-testing/page-object-model.md)
-- [Use the `data-selenium` attribute to identify your elements](e2e-testing/data-selenium.md)
-- [Use CSS-selectors instead of XPath to access elements](e2e-testing/css-selectors.md)
+- [Use a Page Object to interact with your app](gui-testing/page-object-model.md)
+- [Use the `data-selenium` attribute to identify your elements](gui-testing/data-selenium.md)
+- [Use CSS-selectors instead of XPath to access elements](gui-testing/css-selectors.md)
 
 ## Collections
 

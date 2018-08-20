@@ -1,6 +1,6 @@
 ## Use a Page Object to interact with your app
 
-Isolate your E2E tests from the GUI itself with the Page Object pattern.
+Isolate your GUI-driven tests from the GUI itself with the Page Object pattern.
 
 - Abstract the structure of your page away from the actual tests by storing all selectors or interactions unique toyour page or component in a Page Object.
 - If the structure of your HTML or CSS changes, ideally you will now need only minor changes to your Page Object to keep tests passing. Without the Page Object abstraction, you may have a great number of CSS selectors baked into your tests that must be changed.
@@ -15,7 +15,7 @@ Page URLs and selectors are hard coded into the test. We are also tighly bound t
 [Test]
 public void LoginButton_WhenClicked_FocussesUsernameTextbox()
 {
-    Driver.Navigate().GoToUrl("https://qa-site/login.html");
+    Driver.Navigate().GoToUrl("https://qa-site/home.html");
     var showLoginFormButton = Driver.FindElement(By.CssSelector("[data-selenium=show-login-button]"));
     var textBox = Driver.FindElement(By.CssSelector("[data-selenium=username-textbox]"));
     
@@ -46,7 +46,7 @@ public abstract class PageObjectBase
 
 public class HomePageObject : PageObjectBase
 {
-    private const string URL = "https://qa-site/login.html";
+    private const string URL = "https://qa-site/home.html";
     private const SHOW_LOGIN_BUTTON_SELECTOR = "[data-selenium=show-login-button]";
     private const USERNAME_TEXTBOX_SELECTOR = "[data-selenium=username-textbox]";
     

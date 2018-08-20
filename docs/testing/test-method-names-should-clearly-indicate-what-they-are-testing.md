@@ -2,7 +2,7 @@
 
 - A test's purpose (its pre- and post-conditions) should be obvious from its name alone. It should not be necessary to read the code to work out what is being tested.
 - A broken test is much easier to fix when it is obvious what is being tested and therefore what must have broken.
-- This is strongly related to [tests as a specification](tests-should-be-written-as-if-they-are-a-specification.md).
+- This is strongly related to [tests as a specification](tests-as-a-specification.md).
 
 Therefore, names tests in one of the following formats:
 
