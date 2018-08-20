@@ -98,10 +98,12 @@
 - [Avoid race conditions with proper synchronization](async/avoid-race-conditions.md)
 - [Correct use of `ConfigureAwait(false)`](async/configure-await.md)
 
+## Reflection
+- [Do not use hard coded string to identify types](reflection/hard-coded-strings.md)
+
 ## Code style
 - [Naming conventions](code-style/naming-conventions.md)
 - [Do not (explicitly) use monads](code-style/monads.md)
-- [Reflection](code-style/reflection.md)
 - [Do not use `dynamic`](code-style/dynamics.md)
 - [Do not use `#region`](code-style/regions.md)
 

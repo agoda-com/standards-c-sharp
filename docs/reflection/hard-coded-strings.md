@@ -1,7 +1,6 @@
-## Use of reflection
+## Do not use hard coded string to identify types
 
-### Hard-coded string to identify types 
-Do not use hard coded strings to identify namespaces and types. They make refactorings such as moving namespaces or renaming types harder, and can cause runtime failures.
+Do not use hard coded strings to identify namespaces and types. They make refactorings such as moving namespaces or renaming types harder, and failures will be caught at runtime instead of compile time.
 
 #### Don't
 
