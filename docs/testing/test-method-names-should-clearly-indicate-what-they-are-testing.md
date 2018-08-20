@@ -7,16 +7,16 @@
 Therefore, names tests in one of the following formats:
 
 ```c#
-public class <ClassNameUnderTest>Tests 
+public class <SystemUnderTest>Tests 
 {
     // seperated by underscores
     [Test]
-    public void <MethodUnderTest>_<PostCondition>()
+    public void <SubsystemUnderTest>_<PostCondition>()
     {...}
 
     // or
     [Test]
-    public void <MethodUnderTest>_<PreCondition>_<PostCondition>()
+    public void <SubsystemUnderTest>_<PreCondition>_<PostCondition>()
     {...}
 }
 ```
@@ -33,7 +33,7 @@ public void HazardLightsTest()
 
 ```c#
 [Test]
-public void ToggleHarzardLights_WhenAlreadyBlinking_StopsBlinking()
+public void HarzardLightsToggle_WhenLightsAlreadyBlinking_StopsBlinking()
 {...}
 ```
 

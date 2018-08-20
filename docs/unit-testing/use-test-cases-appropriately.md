@@ -1,13 +1,15 @@
 ## Use test cases appropriately
 
+### Overuse of `[TestCase]`
+
 Overuse of `[TestCase]` can make it difficult to see what is actually being tested, especially when there are many parameters. This can results in a combinatorial explosion of cases as new parameters are added.
 
-### Don't
+#### Don't
 
 Here it's difficult from the test name and cases to determine what we are actually testing.
 
 ```c#
- [Test]
+[Test]
 [TestCase(ProductType.AllRooms, 0, true)]
 [TestCase(ProductType.Hotels, 0, true)]
 [TestCase(ProductType.Homes, 0, true)]
@@ -40,7 +42,7 @@ public void ShouldNotRequestSecretDealForAgodaHomesTab(ProductType productType, 
 }
 ```
 
-### Do
+#### Do
 
 By splitting the test into two and naming appropriately, the intention becomes more obvious.
 
@@ -104,3 +106,22 @@ public void Build_WithAdditionalFilters_ShouldRequestApoExceptForHomesProductTyp
     Assert.AreEqual(apoRequestShouldBeNull, apoRequest == null);            
 }
 ```
+
+### Use test cases to test for boundary conditions
+
+`[TestCase]` is great for testing boundary conditions.
+
+#### Do
+
+```c#
+[Test]
+[TestCase(-1, false)]
+[TestCase(0, false)]
+[TestCase(1, true)]
+[TestCase(10, true)]
+[TestCase(11, false)]
+public void NumberIsAPositiveIntegerLessThanOrEqualTo10_DeterminesCorrectly(int number, bool expectedResult)
+{
+    // ...
+}
+``` 

@@ -11,7 +11,7 @@
 
 ## IoC
 - [Register dependencies using attributes](di/attribute-based-registration.md)
-- [Do not use stereotype-style registrations](di/stereotypes.md) <sup>NEW</sup>
+- [Do not use stereotype-style registrations](di/stereotypes.md)
 
 ## Method design
 
@@ -45,12 +45,16 @@
 
 ## Testing
 
-- [Why we test](unit-testing/why.md)
-- [Test method names should clearly indicate what they are testing](unit-testing/test-method-names-should-clearly-indicate-what-they-are-testing.md)
-- [Tests should be written as if they are a specification](unit-testing/tests-should-be-written-as-if-they-are-a-specification.md)
-- [Tests should be short and simple](unit-testing/tests-should-be-short-and-simple.md)
+- [Why we test](testing/why.md)
+- [Follow the testing pyramid](testing/test-pyramid.md)
+- [Test method names should clearly indicate what they are testing](testing/test-method-names-should-clearly-indicate-what-they-are-testing.md)
+- [Write tests as if they are a specification](testing/tests-as-a-specification.md)
+
+
+#### Unit tests
+
+- [Unit tests should be short and simple](unit-testing/tests-should-be-short-and-simple.md)
 - [Use test cases appropriately](unit-testing/use-test-cases-appropriately.md)
-- [Use test cases to test boundary conditions](unit-testing/use-test-cases-to-test-boundary-conditions.md)
 - [Keep app functions pure if possible](unit-testing/keep-functions-pure-if-possible.md)
 - [Be wary of refactoring tests](unit-testing/be-wary-of-refactoring-tests.md)
 - [Prefer black box over white box testing](unit-testing/prefer-black-box-over-white-box-testing.md)
@@ -58,6 +62,12 @@
 - [Create reusable concrete mocks](unit-testing/create-reusable-concrete-mocks.md)
 - [Consider using AutoFixture](unit-testing/consider-using-autofixture.md)
 - [Further reading](https://github.com/jpreese/CSharpUnitTestingBestPractices)
+
+#### E2E tests
+
+- [Use a Page Object to interact with your app](e2e-testing/page-object-model.md)
+- [Use the `data-selenium` attribute to identify your elements](e2e-testing/data-selenium.md)
+- [Use CSS-selectors instead of XPath to access elements](e2e-testing/css-selectors.md)
 
 ## Collections
 
@@ -90,13 +100,13 @@
 - [Correct use of `ConfigureAwait(false)`](async/configure-await.md)
 
 ## Code style
-- [Naming conventions](code-style/naming-conventions.md) <sup>NEW</sup>
+- [Naming conventions](code-style/naming-conventions.md)
 - [Monads](code-style/monads.md)
 - [Reflection](code-style/reflection.md)
 - [`dynamic`](code-style/dynamics.md)
 - [`#region`](code-style/regions.md)
 
-## Configuration <sup>NEW</sup>
+## Configuration
 - [If it's unlikely to change, don't make it configurable](configuration/unlikely-to-change.md)
 - [Use Consul for your app settings](configuration/consul.md)
 - [Use Agoda's config-consul library to interact with Consul](configuration/config-consul.md)
