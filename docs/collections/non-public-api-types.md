@@ -1,4 +1,4 @@
-## Collections on non-public API methods
+## Collections types for ***non***-public API methods
 
 We define a non-public API method as:
 - Any non-`public` method in a class library solution

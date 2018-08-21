@@ -1,4 +1,4 @@
-## Collections on public APIs
+## Collections types for public APIs
 
 We define a public API as:
 - Any `public` method in a class library

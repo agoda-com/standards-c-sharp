@@ -1,4 +1,16 @@
-## Choosing the correct general collection implementation
+## Choosing the correct type for an enumerable
+
+### Supported types
+
+**Only** the following enumerable types may be returned from public methods:
+
+- `IEnumerable<T>`
+- `IList<T>`, `List<T>`
+- `ISet<T>`, `HashSet<T>`, `SortedSet<T>`, `KeyedCollection<T>`
+- `IReadOnlyDictionary<K, V>`, `IDictionary<K, V>`, `Dictionary<K, V>` 
+- `byte[]` - special case for [raw binary data](arrays.md)
+
+### Which one should I use?
 
 The following chart shows how to decide which general collection type to use for your implementation, [internal  exposure](non-public-api-types.md) and [public API exposure](public-api-types.md):
 
@@ -9,7 +21,7 @@ The following chart shows how to decide which general collection type to use for
 
 The concrete types above can be have multiple readers, but are not thread-safe for mutations. Some have thread-safe analogs.
 
-- `List<T>` => [`SynnchronizedCollection<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.synchronizedcollection-1?view=netframework-4.7.1)
+- `List<T>` => [`SynchronizedCollection<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.synchronizedcollection-1?view=netframework-4.7.1)
 - `Dictionary<K,V>` => [`ConcurrentDictionary<K,V>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2?view=netframework-4.7.1)
 - `HashSet<T>` => No direct analog. You could [create your own](https://stackoverflow.com/a/11034999/289319).
 - `SortedSet<T>` => No direct analog. You could try [`SortedList.Synchronized(myUnsynchronizedSortedList)`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.sortedlist.synchronized?view=netframework-4.7.1#System_Collections_SortedList_Synchronized_System_Collections_SortedList_).
