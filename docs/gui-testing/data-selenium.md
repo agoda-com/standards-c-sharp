@@ -1,6 +1,6 @@
 ## Use the `data-selenium` attribute to identify your elements
 
-Make it simple to change HTML structure and CSS classes by identifying elements under test with the `data-selenium` HTML attribute, rather than HTML tags, classes or IDs. The addition of these attributes may slightly increase the size of the page, but when gzipped the difference will probably be negligable. We believe the trade off in developer productivity is worth it.
+Make it simple to change HTML structure and CSS classes by identifying elements under test with the `data-selenium` HTML attribute, rather than HTML tags, classes or IDs. The addition of `data-selenium` attributes may slightly increase the size of the page, but when gzipped the difference will probably be negligable. We believe the trade off in developer productivity is worth it.
 
 #### Don't
 

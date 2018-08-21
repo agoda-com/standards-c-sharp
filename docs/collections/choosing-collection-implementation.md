@@ -5,10 +5,12 @@
 **Only** the following enumerable types may be returned from public methods:
 
 - `IEnumerable<T>`
-- `IList<T>`, `List<T>`
-- `ISet<T>`, `HashSet<T>`, `SortedSet<T>`, `KeyedCollection<T>`
-- `IReadOnlyDictionary<K, V>`, `IDictionary<K, V>`, `Dictionary<K, V>` 
-- `byte[]` - special case for [raw binary data](arrays.md)
+- `ISet<T>`
+- `IList<T>`
+- `IDictionary<K, V>`
+- `IReadOnlyDictionary<K, V>`
+- `KeyedCollection<T>`
+- `byte[]` (special case for [raw binary data](arrays.md))
 
 ### Which one should I use?
 
