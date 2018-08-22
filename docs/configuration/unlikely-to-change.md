@@ -1,6 +1,6 @@
 ## If it's unlikely to change, don't make it configurable
 
-If a value isn't likely to change over time, or between environments, then don't put it into configuration. Use a constant instead.
+If a value isn't likely to change over time, or between environments or datacenters, then don't put it into configuration. Use a constant instead.
 
 #### Don't
 
