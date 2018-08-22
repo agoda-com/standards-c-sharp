@@ -1,6 +1,4 @@
-## `#regions`
-
-DO NOT USE REGIONS
+## Do not use `#region`
 
 - If you need regions to make your code understandable then your class / method is too big. Do not hide the problem inside regions, refactor it.
 - Separating fields, properties, constructors, private methods etc into their own regions just adds noise, and should not be necessary if your class is well factored.
