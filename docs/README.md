@@ -111,6 +111,8 @@
 - [If it's unlikely to change, don't make it configurable](configuration/unlikely-to-change.md)
 - [Use Consul for your app settings](configuration/consul.md)
 - [Use Agoda's config-consul library to interact with Consul](configuration/config-consul.md)
+- [Use Consul's service discovery for server addresses](configuration/service-discovery.md)
+- [Use Consul's Key/Value store for anything else](configuration/key-value.md)
 - [Config files should only be used for Consul client settings](configuration/config-files.md)
 
 ## Logging
