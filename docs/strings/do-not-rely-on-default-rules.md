@@ -16,14 +16,14 @@ Use `StringComparison.Ordinal` or `StringComparison.OrdinalIgnoreCase` for non-l
 
 ```c#
 var protocol = GetProtocol(uri);
-var isHttp = string.Equals("http", protocol); 
+var isHttp = protocol.Equals("http"); 
 ```
 
 #### Do
 
 ```c#
 var protocol = GetProtocol(uri);
-var isHttp = string.Equals("http", protocol, StringComparison.OrdinalIgnoreCase); 
+var isHttp = protocol.Equals("http", StringComparison.OrdinalIgnoreCase); 
 ```
 
 ### For linguistic processing
@@ -40,4 +40,7 @@ var result = string.Compare("able", "ångström");
 
 ```c#
 var result = string.Compare("able", "ångström", StringComparison.CurrentCulture);
+// or
+var result = string.Compare("able", "ångström", new CultureInfo("sv-SE"), CompareOptions.IgnoreNonSpace);
+
 ```
