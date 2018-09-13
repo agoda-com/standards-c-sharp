@@ -84,7 +84,7 @@
 - [Do not return null to represent an empty enumerable](collections/null-empty-enumerables.md)
 - [Do not check for presence of elements before enumerating a collection](collections/dont-check-collection-size.md)
 
-## Asynchronous programming <sup>NEW</sup>
+## Asynchronous programming
 - [Avoid blocking when possible](async/avoid-blocking.md)
 - [Always use the asynchronous version of a method when it exists](async/consume-async-method.md)
 - [Do not expose both sync and async versions of methods](async/expose-async-method.md)
@@ -114,6 +114,8 @@
 - [Use Consul's service discovery for server addresses](configuration/service-discovery.md)
 - [Use Consul's Key/Value store for anything else](configuration/key-value.md)
 
+## Strings
+- [For string operations, always explicitly specify comparison/culture rules](strings/do-not-rely-on-default-rules.md)
 
 ## Logging
 - [Logging](logging/general.md)
