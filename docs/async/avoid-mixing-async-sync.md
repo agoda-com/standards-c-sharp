@@ -17,6 +17,6 @@ public int MyMethod(int input)
 public async Task<int> MyMethodAsync(int input)
 {
     // ...
-    return await _dependency.DoWorkAsync(input); // returns thread to threadpool while task completes
+    return await _dependency.DoWorkAsync(input); // frees thread to do other stuff while task completes
 }
 ```
