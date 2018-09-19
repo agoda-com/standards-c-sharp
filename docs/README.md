@@ -117,6 +117,9 @@
 ## Strings
 - [For string operations, always explicitly specify comparison/culture rules](strings/do-not-rely-on-default-rules.md)
 
+## URL routing
+- [Use attribute-based routing instead of convention-based routing](routing/attribute.md)
+
 ## Logging
 - [Logging](logging/general.md)
 - [Log levels](logging/log-levels.md)
