@@ -95,6 +95,7 @@
 - [Use `await Task.WhenAny/All` instead of `Task.WaitAny/All`](async/when-any-all.md)
 - [Prefer to start tasks with `Task.Run`](async/task-run.md)
 - [Use `await` instead of `Task.ContinueWith`](async/never-task-continue-with.md)
+- [Avoid unnecessary use of `async` modifier](async/avoid-unnecessary-async.md)
 - [Avoid race conditions with proper synchronization](async/avoid-race-conditions.md)
 - [Correct use of `ConfigureAwait(false)`](async/configure-await.md)
 
