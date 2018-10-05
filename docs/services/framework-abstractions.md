@@ -37,8 +37,7 @@ public interface IUserContext
     string Username { get; }
 }
 
-// Implement and register an environment-specific implementation that encapsulates 
-// all the messy details.
+// Register an environment-specific implementation that encapsulates all the messy details.
 public sealed class AspNetUserContext : IUserContext
 {   
     private readonly IHttpContextAccessor accessor;
