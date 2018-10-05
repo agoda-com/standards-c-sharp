@@ -51,6 +51,7 @@ public sealed class AspNetUserContext : IUserContext
     public string Username => accessor.HttpContext.Context.User.Identity.Name;
 }
 
+// Inject the abstraction into our business logic
 public sealed class CustomerRepository : ICustomerRepository
 {
     private readonly IUserContext userContext;
