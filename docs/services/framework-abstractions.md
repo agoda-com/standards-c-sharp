@@ -57,7 +57,7 @@ public sealed class CustomerRepository : ICustomerRepository
     private readonly IUserContext userContext;
     private readonly IUnitOfWork uow;
 
-    // We configure the container to inject our application abstraction.
+    // We configure the container to inject our envorinoment-specific abstraction.
     public CustomerRepository(IUserContext userContext, IUnitOfWork uow)
     {
         this.userContext = userContext;
@@ -67,7 +67,7 @@ public sealed class CustomerRepository : ICustomerRepository
     public void Save(Customer entity)
     {
         // Now, we've isolated ourselves from the underlying framework, allowing our
-        // code to also be run from a Windows service, a console application, etc.
+        // code to be run from a Windows service, a console application, etc.
         // Further, we've eliminated the trainwreck above, so our class becomes much more
         // straightforward to test.
         entity.CreatedBy = userContext.Username;
