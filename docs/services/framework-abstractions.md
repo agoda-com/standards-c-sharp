@@ -37,7 +37,7 @@ public interface IUserContext
     string Username { get; }
 }
 
-// Provide and register an environment specific implementation that encapsulates 
+// Implement and register an environment-specific implementation that encapsulates 
 // all the messy details.
 public sealed class AspNetUserContext : IUserContext
 {   
@@ -51,13 +51,12 @@ public sealed class AspNetUserContext : IUserContext
     public string Username => accessor.HttpContext.Context.User.Identity.Name;
 }
 
-// Inject the abstraction into our business logic
 public sealed class CustomerRepository : ICustomerRepository
 {
     private readonly IUserContext userContext;
     private readonly IUnitOfWork uow;
 
-    // We configure the container to inject our envorinoment-specific abstraction.
+    // Inject our envorinoment-specific abstraction.
     public CustomerRepository(IUserContext userContext, IUnitOfWork uow)
     {
         this.userContext = userContext;
