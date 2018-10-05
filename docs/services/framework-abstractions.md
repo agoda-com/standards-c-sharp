@@ -21,7 +21,7 @@ public sealed class CustomerRepository : ICustomerRepository
     public void Save(Customer entity)
     {
         // Not only have we tied ourselves to ASP.NET, but our class becomes annoying 
-        // to test as we have to mock this long chain of objects:
+        // to test as we have to mock this long chain of references:
         entity.CreatedBy = this.accessor.HttpContext.User.Identity.Name;
         this.uow.Save(entity);
     }
