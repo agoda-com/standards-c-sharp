@@ -12,9 +12,9 @@ public sealed class CustomerRepository : ICustomerRepository
     private readonly IHttpContextAccessor accessor;
     private readonly IUnitOfWork uow;
 
-    public CustomerRepository(IUserContext userContext, IUnitOfWork uow)
+    public CustomerRepository(IHttpContextAccessor accessor, IUnitOfWork uow)
     {
-        this.userContext = userContext;
+        this.accessor = accessor;
         this.uow = uow;
     }
 
