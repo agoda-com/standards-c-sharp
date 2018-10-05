@@ -31,7 +31,7 @@ public sealed class CustomerRepository : ICustomerRepository
 #### Do
 
 ```c#
-// Create a non-framework specific abstraction that gives us *only* what we really need.
+// Create a non-framework specific abstraction that provies *only* what we really need.
 public interface IUserContext
 {
     string Username { get; }
