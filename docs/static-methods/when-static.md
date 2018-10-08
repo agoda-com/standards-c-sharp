@@ -1,26 +1,30 @@
-## When to write a static method (eg. in a helper class)
+## Consider making a method static:
 
 - When it it pure - ie. operates in-process, has no side effects, and always returns the same result for a given input.
 - When it _does not_ require any dependencies.
-- When it _does_ require dependencies, but they can be reasonably* be passed as input arguments(s) - use judgement. (*define reasonably)
-- When the method is relatively simple and does not require extensive test setup (though extensive test setup may indicate a code smell in the method itself).
-- When your only dependency is the ExperimentManager. Instead of the EM, pass the result of DetermineVariant as a parameter to your static method. When your experiment is (de)integrated, you will remove any dependency on ExperimentManager anyway, so don't add it in the first place.
+- When it _does_ require dependencies, but they can be reasonably be passed as method parameter(s). We don't want to pass an irrelevant dependency through 10 methods just so the 11th can access it - use judgement.
+- When injecting a dependency just to call a single operation on it (eg. `dependency.IsX()`). If the caller already takes this dependency, consider making the callee static, and passing the result of `dependency.IsX()` as a parameter. 
+    - Reconsider this if it would bloat the parameter list. (Though perhaps the method could be broken down into smaller methods?)
+    - Yes, this creates a tension between constructor bloat and parameter bloat.
+- When the method is relatively simple and does not require extensive test setup. (Though extensive test setup might indicate a code smell in the method itself).
 
-#### Don't
+
+#### Reconsider
 
 ```c#
-public class MyClass
+public class MyClass : IMyClass
 {
-    private IExperimentManager _experimentManager;
+    private readonly IDependecy _dependency;
     
-    public MyClass(IExperimentManager experimentManager)
+    public MyClass(IDependecy dependency)
     {
-        _experimentManager = experimentManager;
+        _dependency = dependency;
     }
     
     public void MyMethod()
     {
-        if (_experimentManager.DetermineVariant(ExpId.EXP))
+        // We passed in the entire dependency just to call one method on it.
+        if (_dependency.IsX())
         {
             // do something
         }
@@ -32,14 +36,14 @@ public class MyClass
 }
 ```
 
-#### Do
+#### Consider
 
 ```c#
 public static class MyClass
 {
-    public static void MyMethod(bool isExpB)
+    public static void MyMethod(bool isX)
     {
-        if (isExpB)
+        if (isX)
         {
             // do something
         }
@@ -49,4 +53,8 @@ public static class MyClass
         }
     }
 }
+
+// then from the caller:
+MyClass.MyMethod(_dependency.IsX());
+
 ```

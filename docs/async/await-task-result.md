@@ -8,18 +8,14 @@
 
 #### Don't
 ```c#
-var task1 = DownloadFileAsync("...");
-var task2 = DownloadFileAsync("...");
-await Task.WhenAll(task1, task2);
-var result1 = task1.Result; // not a problem, as we already awaited task completion...
+var task = DownloadFileAsync("...");
+var result = task.Result;
 ```
 
 #### Do
 ```c#
-var task1 = DownloadFileAsync("...");
-var task2 = DownloadFileAsync("...");
-await Task.WhenAll(task1, task2);
-var result1 = await task1; // ... but we want to standardize on this safer style
+var task = DownloadFileAsync("...");
+var result = await task;
 ```
 
 [Further reading](https://blog.stephencleary.com/2014/12/a-tour-of-task-part-6-results.html)

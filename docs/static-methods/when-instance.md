@@ -1,7 +1,7 @@
-## When to write an instance method (eg. in an injected component)
+## When to make an instance method:
 
-- When your method is impure - ie. makes an external call, has side effects like writing to the disk. These parts will need to be mocked for unit tests.
-- When it requires one or more (impure) dependencies. These will need to be passed into the constructor for mocking.
-- When setting up test cases for the static version is time consuming or difficult. This may, however, indicate a code smell, but there are legitimate cases where this may be required.
-  - In this case, an instance method with mock dependencies may ease testing.
-  - Do consider keeping the method static but using a builder to help creating the complex mock data.
+- When your method is impure - ie. makes an external call, has side effects like writing to the disk etc. These parts will need to be mocked and injected for unit tests.
+- When it requires access to one or more dependencies, again these must be injected into the constructor for mockability.
+- When setting up test cases for the static version of the method is time consuming or difficult.
+  - In this case, consider writing an instance method to enable injection of mock dependencies to simplify testing.
+  - Or, consider keeping the method static but introduce a builder class to help create complex mock data.

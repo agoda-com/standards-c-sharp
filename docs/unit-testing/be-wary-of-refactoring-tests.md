@@ -133,9 +133,9 @@ public class MyTestClassTest : BaseTest
 }
  ```
  
- ### Do
+### Do
  
- Here, the code is more verbose, and there's a bit of copy-pasting, but it's extremely clear, making debugging and fixing easy.
+Here, the code is more verbose, and there's a bit of copy-pasting, but it's extremely clear, making debugging and fixing easy.
  
  ```c#
  [TestFixture]
