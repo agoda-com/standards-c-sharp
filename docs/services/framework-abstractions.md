@@ -31,7 +31,7 @@ public sealed class CustomerRepository : ICustomerRepository
 #### Do
 
 ```c#
-// Create an environment-agnostic abstraction that provies *only* what we really need.
+// Create an environment-agnostic abstraction that provides *only* what we really need.
 public interface IUserContext
 {
     string Username { get; }
