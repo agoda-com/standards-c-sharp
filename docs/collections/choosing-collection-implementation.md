@@ -16,7 +16,7 @@
 
 The following chart shows how to decide which general collection type to use for your implementation, [internal  exposure](non-public-api-types.md) and [public API exposure](public-api-types.md):
 
-![Collection type flowchart](https://drive.google.com/uc?id=17-qROxVsHI4MTV5tBdil9NyhXnjcNVkz)
+![Collection type flowchart](./collection-type-flowchart.png)
 <!-- draw.io source in https://drive.google.com/open?id=1YnYEfisi7DYOT3IwYQwWbyCtzFP7prK3 -->
   
 ### Thread safety
