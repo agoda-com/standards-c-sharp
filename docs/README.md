@@ -114,6 +114,7 @@
 - [Use config files only for Consul client settings and sensitive data](configuration/config-files.md)
 - [Use Consul's service discovery for server addresses](configuration/service-discovery.md)
 - [Use Consul's Key/Value store for anything else](configuration/key-value.md)
+- [Do not use MachineName](configuration/machine-name.md)
 
 ## Strings
 - [For string operations, always explicitly specify comparison/culture rules](strings/do-not-rely-on-default-rules.md)
