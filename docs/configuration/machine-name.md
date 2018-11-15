@@ -1,4 +1,4 @@
-## Do not use `MachineName`
+## Do not use `MachineName` to configure the application
 
 
 - Use of `MachineName` tightly couples your code to the our infrastructure and its naming scheme, which can and will change over time.
