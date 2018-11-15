@@ -22,7 +22,7 @@ Test is decoupled from HTML and CSS, meaning we can easily change the page layou
 
 ```html
 <form>
-    <button class="login-button" data-selenium="login-button"">Log in</button>
+    <button class="login-button" data-selenium="login-button">Log in</button>
 </form>
 ``` 
 
