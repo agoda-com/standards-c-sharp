@@ -6,8 +6,11 @@
 ## Project structure and design
 
 - [Keep web solution structure simple](solution-structure/web-solution-structure.md)
+
+## Service design
 - [Service design guide](services/service-design.md)
 - [Do not depend on framework abstractions](services/framework-abstractions.md)
+- [Avoid constructor over injection](services/avoid-constructor-over-injection.md)
 
 ## IoC
 - [Register dependencies using attributes](di/attribute-based-registration.md)

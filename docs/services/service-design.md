@@ -24,7 +24,7 @@ Unnecessary interfaces pollute the codebase and make it more difficult to unders
 
 ### Dependencies
 
-- Keep each component's dependency count to a reasonable level. The more dependencies, the more difficult the code is to change. An absolute maximum is 10, and a more reasonable level is 7 or fewer.
+- Keep each component's dependency count to a reasonable level. The more dependencies, the more difficult the code is to change. An absolute maximum is 10, and a more reasonable level is 7 or fewer. See [Avoid constructor over injection](./avoid-constructor-over-injection.md) for more.
 - Inject only _impure_ components as dependencies (see above). This helps reduce the dependency count, and Keeps It Simple.
 - A high dependency count is a good indication that a component should be refactored into more narrowly focused responsibilities.
 - Declare a component's dependencies explicitly in its constructor. Don't use property injection. It's [super lame](http://simpleinjector.readthedocs.io/en/latest/advanced.html#property-injection).
