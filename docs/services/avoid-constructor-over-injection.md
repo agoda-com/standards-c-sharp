@@ -67,7 +67,7 @@ But this doesn't really solve anything, and might actually make things worse:
 
 - `MyService` is still doing too much - we've just hidden its ugly constructor in another component. Now instead of a service that takes 24 dependencies, we have a service _set_ that does the same. We have solved nothing, hidden the problem, _and_ increased complexity with an extra class/interface.
 - It is now not clear from the constructor of `MyService` which particular dependencies from the set it actually requires. We get no help from the tooling, which might otherwise indicate an unused field. We have to dig into the implementation and analyze this for ourselves.
-- It is not clear which dependencies are required _everywhere_ in the service, and which are only required occasionally. Constructor parameters that are required by a single method in a large service indicate that the method might belongs somewhere else.  
+- It is not clear which dependencies are required _everywhere_ in the service, and which are only required occasionally. Constructor parameters that are required by a single method in a large service indicate that the method might belong somewhere else.  
 
 ### Refactor to Facade Services
 
