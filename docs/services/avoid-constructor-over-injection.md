@@ -1,13 +1,13 @@
 ## Avoid constructor over injection
 
-A problem we often encounter in our codebase are components with huge lists of constructor paramters. They started with good intentions, but incrementally so much behavior has been added that the list has become unwieldy.
+A problem we often encounter in our codebase are components with huge lists of constructor paramters. They started with good intentions, but so much extra behavior has been incrementally that the constructor has become unwieldy.
 
-This has two obvious problems:
+This indicates two obvious problems:
 
 - For the service to require so many dependencies is almost certainly violating the Single Responsibility Principle.
 - Unit testing the component requires setting up huge numbers of mocks.
 
-### The service set
+### Avoid service sets
  
 Service sets have been be used to mitigate constructor over injection. For instance, instead of:
 
@@ -63,13 +63,13 @@ public class MyService : IMyService
 }
 ```
 
-This has a number of problems however:
+But this doesn't really solve anything, and might actually make things worse:
 
-- We have not solved the underlying problem, that `MyService` is doing too much - we've just pushed it down one level. Now we have a service _set_ that takes 24 dependencies. We have solved nothing, just hidden the problem, _and_ we've increased complexity with an extra class.
-- It is not clear from the constructor of `MyService` which particular dependencies from the set it actually requires. We get no help from the tooling, which might otherwise indicate an unused field. We have to dig into the implementation and analyze this ourselves.
+- `MyService` is still doing too much - we've just hidden its ugly constructor in another component. Now instead of a service that takes 24 dependencies, we have a service _set_ that does the same. We have solved nothing, hidden the problem, _and_ increased complexity with an extra class/interface.
+- It is now not clear from the constructor of `MyService` which particular dependencies from the set it actually requires. We get no help from the tooling, which might otherwise indicate an unused field. We have to dig into the implementation and analyze this for ourselves.
 - It is not clear which dependencies are required _everywhere_ in the service, and which are only required occasionally. Constructor parameters that are required by a single method in a large service indicate that the method might belongs somewhere else.  
 
-### The Facade Service
+### Refactor to Facade Services
 
 Clearly, the proper solution is to refactor `MyService` into smaller more focused services. Mark Seemann calls these [Facade Services](http://blog.ploeh.dk/2010/02/02/RefactoringtoAggregateServices/):
 
