@@ -1,8 +1,8 @@
 ## Avoid constructor over injection
 
-A problem we often encounter in our codebase are components with huge lists of constructor paramters. They started with good intentions, but so much extra behavior has been incrementally that the constructor has become unwieldy.
+We often encounter components with huge lists of constructor parameters. They started with good intentions, but behavior has been added incrementally over time that the constructor - and indeed the service - has become unwieldy.
 
-This indicates two obvious problems:
+This usually indicates two problems:
 
 - For the service to require so many dependencies is almost certainly violating the Single Responsibility Principle.
 - Unit testing the component requires setting up huge numbers of mocks.
@@ -67,7 +67,8 @@ But this doesn't really solve anything, and might actually make things worse:
 
 - `MyService` is still doing too much - we've just hidden its ugly constructor in another component. Now instead of a service that takes 24 dependencies, we have a service _set_ that does the same. We have solved nothing, hidden the problem, _and_ increased complexity with an extra class/interface.
 - It is now not clear from the constructor of `MyService` which particular dependencies from the set it actually requires. We get no help from the tooling, which might otherwise indicate an unused field. We have to dig into the implementation and analyze this for ourselves.
-- It is not clear which dependencies are required _everywhere_ in the service, and which are only required occasionally. Constructor parameters that are required by a single method in a large service indicate that the method might belong somewhere else.  
+
+When dealing with constructor over injection, it can be useful to distinguish which dependencies are required _everywhere_ in the service, and which are only required occasionally. A dependency that is required by a single method in a large service indicates that the method (and therefore the dependency it took) might belong somewhere else.
 
 ### Refactor to Facade Services
 
@@ -75,7 +76,7 @@ Clearly, the proper solution is to refactor `MyService` into smaller more focuse
 
 > While the Facade Service may start its life as a result of a pure mechanistic refactoring, it often turns out that the extracted behavior represents a Domain Concept in its own right.
 
-Seemann has a very low threshold for constructor parameter count, which he says "lies somewhere around 3-4". Let's look at his example, which starts with 5 constructor arguments:
+Seemann has a very low threshold for constructor parameter count, which he says "lies somewhere around 3-4". In his example he starts with 5 constructor arguments:
 
 ```c#
 public class OrderProcessor
@@ -113,7 +114,6 @@ public class OrderProcessor
 He comments:
 
 > If you examine the code it should quickly become apparent that the Collect method encapsulates a cluster of dependencies: IAccountsReceivable, IRateExchange and IUserContext. In this case it's pretty obvious because they are already encapsulated in a single private method. In real production code, you may need to perform a series of internal refactorings before a pattern starts to emerge and you can extract an interface that aggregates several dependencies.
-  
 
 Now we've identified this cluster of dependencies, we can extract them into their own concern:
                                                                                          
@@ -145,7 +145,7 @@ public class OrderCollector : IOrderCollector
 }
 ```
 
-Because we have delegated order collection to its own service, our `OrderProcessor` class now only requires 3 dependencies, and the domain concern of order collection, which was always there implicitly, is now explicit:
+The domain concern of order collection - which was before implicit - has now been made explicit. Now we can delegate order collection to its own service, our `OrderProcessor` class now only requires 3 dependencies:
 
 ```c#
 public class OrderProcessor
@@ -181,6 +181,6 @@ So the process goes like this:
 > 1. Remove the redundant dependencies.
 > 1. Rinse and repeat :)
 
-The beauty of this approach is that each component because almost trivial to unit test, as it does so little
+The beauty of this approach is that each component because almost trivial to unit test, as it does so little.
 
 http://blog.ploeh.dk/2010/02/02/RefactoringtoAggregateServices/
