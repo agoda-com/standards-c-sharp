@@ -145,7 +145,7 @@ public class OrderCollector : IOrderCollector
 }
 ```
 
-The domain concern of order collection - which was before implicit - has now been made explicit. Now we can delegate this convern to its own service, our `OrderProcessor` class only requires 3 dependencies:
+The domain concern of order collection - which was before implicit - has now been made explicit. Now we can delegate this concern to its own service, our `OrderProcessor` class only requires 3 dependencies:
 
 ```c#
 public class OrderProcessor
