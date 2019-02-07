@@ -1,6 +1,6 @@
 ## Avoid constructor over injection
 
-We often encounter components with huge lists of constructor parameters. They started with good intentions, but behavior has been added incrementally over time that the constructor - and indeed the service - has become unwieldy.
+We have all encountered components with huge lists of constructor parameters. They started with good intentions, but over time more behavior has gradually been added, so the constructor - and indeed the service - have become unwieldy.
 
 This usually indicates two problems:
 
@@ -65,7 +65,7 @@ public class MyService : IMyService
 
 But this doesn't really solve anything, and might actually make things worse:
 
-- `MyService` is still doing too much - we've just hidden its ugly constructor in another component. Now instead of a service that takes 24 dependencies, we have a service _set_ that does the same. We have solved nothing, hidden the problem, _and_ increased complexity with an extra class/interface.
+- `MyService` is still doing too much - we've just hidden its ugly constructor inside a new component. Now instead of a service that takes 24 dependencies, we have a service _set_ that does the same. We have solved nothing, hidden the problem, _and_ increased complexity with an extra class/interface.
 - It is now not clear from the constructor of `MyService` which particular dependencies from the set it actually requires. We get no help from the tooling, which might otherwise indicate an unused field. We have to dig into the implementation and analyze this for ourselves.
 
 When dealing with constructor over injection, it can be useful to distinguish which dependencies are required _everywhere_ in the service, and which are only required occasionally. A dependency that is required by a single method in a large service indicates that the method (and therefore the dependency it took) might belong somewhere else.
@@ -115,7 +115,7 @@ He comments:
 
 > If you examine the code it should quickly become apparent that the Collect method encapsulates a cluster of dependencies: IAccountsReceivable, IRateExchange and IUserContext. In this case it's pretty obvious because they are already encapsulated in a single private method. In real production code, you may need to perform a series of internal refactorings before a pattern starts to emerge and you can extract an interface that aggregates several dependencies.
 
-Now we've identified this cluster of dependencies, we can extract them into their own concern:
+Now we've identified this behavior and cluster of dependencies, we can extract it into its own concern:
                                                                                          
 ```c#
 public interface IOrderCollector
@@ -145,7 +145,7 @@ public class OrderCollector : IOrderCollector
 }
 ```
 
-The domain concern of order collection - which was before implicit - has now been made explicit. Now we can delegate order collection to its own service, our `OrderProcessor` class now only requires 3 dependencies:
+The domain concern of order collection - which was before implicit - has now been made explicit. Now we can delegate this convern to its own service, our `OrderProcessor` class only requires 3 dependencies:
 
 ```c#
 public class OrderProcessor
@@ -181,6 +181,6 @@ So the process goes like this:
 > 1. Remove the redundant dependencies.
 > 1. Rinse and repeat :)
 
-The beauty of this approach is that each component because almost trivial to unit test, as it does so little.
+The beauty of this approach is that each component becomes almost trivial to test, as it does so little.
 
 http://blog.ploeh.dk/2010/02/02/RefactoringtoAggregateServices/
