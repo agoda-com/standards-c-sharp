@@ -74,7 +74,7 @@ public class MyController
     private MyViewModelMapper mapper;
     private IMyService service;
     
-    public MyService(MyViewModelMapper mapper, IMyService service)
+    public MyController(MyViewModelMapper mapper, IMyService service)
     {
         this.mapper = mapper;
         this.service = service;
@@ -95,8 +95,7 @@ public class MyController
 
 public class MyViewModel
 {
-    public int Id { get; set; }
-
+    
     // Method is pure, so doesn't need to be mocked or injected -> make it static:
     public static MyViewModel From(MyModel model)
     {
